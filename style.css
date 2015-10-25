@@ -91,19 +91,6 @@ nav ul li a {
 	display:none;
 }
 
-.intro {
-	font-family: 'Architects Daughter';
-	top: 35%;
-	position: absolute;
-	width: 100%;
-	color: white;
-}
-
-#hiimliang {
-	font-size: 120px;
-	text-shadow: 1.5px 0 black, 0 1.5px black, 0px 0 black, 0 -0px black;
-}
-
 .profpic {
 	float:right;
 	border-radius:50%;
@@ -145,30 +132,6 @@ div.parallax {
   display: block;
 }
 
-div.parallax-1 {
-	height: 100vh;
-  	background-image: url("images/title.png");
-  	text-align:center;
-	display:block;
-	margin: auto;
-	background-attachment:scroll;
-}
-div.parallax-2 {
-	height: 30vh;
- 	background-image: url("images/grass.jpg");
-}
-div.parallax-3 {
-	height:30vh;
-  background-image: url("images/lemountain.jpg");
-}
-div.parallax-4 {
-	height:30vh;
-	background-image: url("images/couple.jpg")
-}
-div.parallax-5 {
-	height:20vh;
-	background-image: url('images/sunsetz3.jpg');
-}
 div.parallax-text {
 	font-family: 'Architects Daughter';
 	position:relative;
