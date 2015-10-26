@@ -116,6 +116,7 @@ nav ul li a {
 	border:0;
 	filter:brightness(50%);
 }
+
 .downarrowimage:focus {
 	outline:0;
 }
@@ -127,7 +128,7 @@ nav ul li a {
 div.parallax {
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: static;
   background-size: cover;
   display: block;
 }
@@ -155,10 +156,9 @@ div.parallax-text {
 }
 
 .content {
-  width: 80vw;
-  margin: 20px auto;
-  max-width: 1500px;
-  background-color:white;
+	padding:20px 10vw 20px 10vw;
+  	max-width: 1500px;
+  	background-color:white;
 }
 .code {
 	font-family:'courier prime';
