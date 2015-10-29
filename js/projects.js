@@ -99,3 +99,11 @@ $(window).resize(function() {
 		$('.projectText').css('min-height', '240px');
 	}
 })
+
+$(document).ready(function() {
+	$('nav ul a li').hover(function() {
+		$(this).css('background-color', '#dddddd')
+	}, function() {
+		$(this).css('background-color', 'white')
+	})
+})
