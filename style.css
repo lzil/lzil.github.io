@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Raleway";
-    src: url("fonts/Raleway/Raleway-Regular.woff") format("woff");
+    src: url("fonts/Raleway/Raleway-Regular.ttf") format("truetype");
 }
 
 @font-face {
@@ -18,7 +18,7 @@
 }
 
 html {
-	font-family: 'Exo 2';
+	font-family: 'maven pro';
 }
 
 body {
@@ -76,10 +76,10 @@ footer ul li {
 
 a.body-link {
 	text-decoration: none;
-	color: #4488ff;
+	color: #ca7272;
 }
 a.body-link:hover {
-	color: #99bbff;
+	color: #dd8888;
 }
 nav ul li a {
 	text-decoration: none;
@@ -101,14 +101,15 @@ nav ul li a {
 	display:none;
 }
 
-.about {
+.iam {
 	text-align:center;
-	font-size: 36pt;
 	line-height: 60pt;
+	font-size:25pt;
 }
-.about-text {
+.iam-text {
 	color:#ca7272;
-	font-weight: bold;
+	font-size:36pt;
+	font-family: maven pro;
 }
 .profpic {
 	float:right;
@@ -153,7 +154,7 @@ div.parallax {
 }
 
 div.parallax-text {
-	font-family: 'architects daughter';
+	font-family: 'maven pro';
 	position:relative;
 	text-align:center;
 	top:calc(50% - 40px);

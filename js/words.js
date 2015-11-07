@@ -1,22 +1,21 @@
 $(document).ready(function() {
 	words = [
-		['coder', 'student', 'runner', 'philosopher'],
-		['spends', 'wastes', 'kills'],
-		['debugging', 'penspinning', 'eating'],
-		['kinda', 'really', 'might'],
-		['fruit', 'chocolate', 'tennis', 'Python']
+		['coder', 'student', 'runner', 'philosopher', 'dreamer'],
+		['spends', 'wastes', 'kills', 'squanders', 'expends'],
+		['debugging', 'penspinning', 'eating', 'sleeping', 'daydreaming', 'reading', 'dancing', 'thinking'],
+		['kinda', 'really', 'might', 'sort of'],
+		['fruit', 'chocolate', 'tennis', 'Python', 'machine learning', 'design', 'dragons', 'origami', 'kpop']
 	]
 	wordsInd = [0, 0, 0, 0, 0]
 	wordsCurInd = [0, 0, 0, 0, 0]
-	var about = $('.about-text');
+	var iam = $('.iam-text');
 
 	var buildup = ['', '', '', '']
 	function build (offset, buildup) {
-		var aboutnum = $('#about' + (offset + 1))[0]
+		var iamnum = $('#iam' + (offset + 1))[0]
 		setTimeout(function () {
 			buildup += words[offset][wordsInd[offset]].charAt(wordsCurInd[offset])
-			aboutnum.innerHTML = buildup
-			console.log(aboutnum)
+			iamnum.innerHTML = buildup
 			wordsCurInd[offset]++;
 			if (wordsCurInd[offset] < words[offset][wordsInd[offset]].length) {
 				build(offset, buildup);
@@ -31,7 +30,7 @@ $(document).ready(function() {
 					build(offset, '')
 				}, 2000)
 			}
-		}, 100)
+		}, 70)
 	}
 	for (i = 0; i < 5; i++) {
 		
