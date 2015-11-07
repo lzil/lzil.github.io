@@ -17,7 +17,11 @@ $(document).ready(function() {
 	}
 
 	var hoverLabel = $('#projectPlace');
-	var curClick = null;
+	var curClick = $('.project[name=harmony]')[0];
+	$(curClick).css({'-webkit-filter': 'brightness(60%)', 'filter': 'brightness(60%)'})
+	proj = $(curClick).attr('name');
+	$('#'+proj).css('display', 'inline-block');
+	hoverLabel = $('#'+proj);
 	$('.project').hover(function() {
 		hoverLabel.hide();
 		if (this != curClick) $(this).css({'-webkit-filter': 'brightness(80%)', 'filter': 'brightness(80%)'})
