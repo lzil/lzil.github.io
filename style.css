@@ -1,6 +1,6 @@
 @font-face {
-    font-family: "Raleway";
-    src: url("fonts/Raleway/Raleway-Regular.ttf") format("truetype");
+    font-family: "Maven Pro";
+    src: url("fonts/Maven_Pro/MavenPro-Regular.woff") format("woff");
 }
 
 @font-face {
@@ -166,8 +166,8 @@ div.parallax-text {
 	font-size: 48px;
 	color:white;
 	display:inline-block;
-	-webkit-transform-origin: 50% 45%;
-    transform-origin: 50% 45%;
+	-webkit-transform-origin: 50% 51%;
+    transform-origin: 50% 51%;
     transition: all .4s ease-in-out;
 }
 .github:hover, .fa-github:hover  {
