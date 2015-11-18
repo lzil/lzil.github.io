@@ -9,6 +9,7 @@
     <script type="text/javascript" src="js/projects.js"></script>
     <script type='text/javascript' src='js/words.js'></script>
     <script type="text/javascript" src="js/contact.js"></script>
+    <script type="text/javascript" src="js/canvas.js"></script>
     <script src="http://zhoul.scripts.mit.edu/fruity.js"></script>
     <title>Liang Zhou</title>
 </head>
@@ -35,7 +36,7 @@
 <body>
 <div id="home" class="parallax-window" style="height:100vh" data-parallax="scroll" data-image-src="images/titlered.png">
     <div class="downarrow">
-    	<a href="#about"><img class="downarrowimage" src="images/down.png"></a>
+    	<a href="#iam"><img class="downarrowimage" src="images/down.png"></a>
     </div>
 </div>
 <div class='content' id='iam'>
@@ -49,12 +50,14 @@
 <div class="parallax-window" style="height:30vh" data-parallax="scroll" data-image-src="images/couplet2.png" id='about'>
     <div class='parallax-text'>About</div>
 </div>
-<div class="content">
-        <img src='images/dragon.png' class='dragon'> 
+<div class="content about">
+        <canvas id="actCanvas" height='100' width='800'></canvas>
         <p>I'm from sunny (hot) southern California. No, I don't surf, but I do wear shorts and flip flops.</p>
         <p>I'm an <a class="body-link" href="http://www.theonion.com/article/mit-physicists-split-the-smithereen-3500">MIT</a> student studying Electrical Engineering and Computer Science, which basically means that I drop $60k a year to learn how to move pixels around on my Macbook screen. On campus, I do a lot of random (cool!) things - I help organize <a class="body-link" href="http://dynamit.mit.edu">dynaMIT</a>, I'm Director of Publicity for the <a class="body-link" href="http://adt.mit.edu">Asian Dance Team</a> (watch our videos <a class="body-link" href="https://www.youtube.com/user/MITAsianDanceTeam">here</a>!), and I'm on the <a class="body-link" href="http://eecscon.mit.edu">EECScon</a> program committee.</p>
-        <p>I can twirl pens around my fingers, I'm decent at tennis, and sometimes I <a class="tooltip" title="Like the dragon on the right!"><span title="">make origami</span></a>. I love running. Long distance. I can't whistle :(</p>
+        <p>I can twirl pens around my fingers, I'm decent at tennis, and sometimes I make origami. I love running. Long distance. I can't whistle :(</p>
         <p>I like fruit. And chocolate <3</p>
+        <img src='images/roughmit3.png' class='dragon'> <br>
+        
 </div>
 
 <div class="parallax-window" style="height:30vh" data-parallax="scroll" data-image-src="images/seat.png" id='projects'>
@@ -84,14 +87,14 @@
         <li class='project' name='stars'>
             <div class='projectLetter'>s</div>
         </li>
+        <li class='project' name='reedr'>
+            <div class='projectLetter'>r</div>
+        </li>
         <li class='project' name='impression'>
             <div class='projectLetter'>i</div>  
         </li>
         <li class='project' name='resistance'>
             <div class='projectLetter'>r</div>
-        </li>
-        <li class='project' name='clairvoyance'>
-            <div class='projectLetter'>c</div>
         </li>
     </ul>
 
@@ -129,6 +132,12 @@
         <img class='project-logo' src='images/fruity.png'><b class="project-title">fruity.js</b>
         <p><span class='code'>&lt;script src="https://zhoul.scripts.mit.edu/fruity.js"&gt;</span></p>
         <p>I created a small Javascript library to fruitify your site for fun and because I felt like it. Kinda hard to explain what that means - try typing &nbsp;<span class='code'>fruit</span>. It's uninvertible, however, so you'll have to refresh the page to get everything the way it should be again...</p>
+    </div>
+    <div id="reedr" class="projectText">
+        <img class='project-logo' src='images/question.png'><b class="project-title">reedr</b>
+        <p><a class='body-link' href='https://github.com/turbomaze/reedr'>See the source code here!</a></p>
+        <p>For YHack 2015, my team created a vanilla Javascript application that takes in an image of text (i.e. a page from a book) and performs word segmentation (not OCR - we simply recognize blocks of words, not the characters themselves) and orders those words for potential word division. The original idea was to apply this to speed reading, in a similar vein to existing programs like Spreedr. We won the prize for the <b style='color:red'>Best Hack under 4kb</b> from Datto!</p>
+        <p><i>Created fall 2015 with Vahid F, Anthony L</i></p>
     </div>
     <div id="impression" class="projectText">
         <img class='project-logo' src='images/question.png'><b class="project-title">impression</b>

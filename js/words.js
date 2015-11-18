@@ -2,9 +2,9 @@ $(document).ready(function() {
 	words = [
 		['coder', 'student', 'runner', 'philosopher', 'dreamer'],
 		['spends', 'wastes', 'kills', 'squanders', 'expends'],
-		['debugging', 'penspinning', 'eating', 'sleeping', 'daydreaming', 'reading', 'dancing', 'thinking'],
-		['kinda', 'really', 'might', 'sort of'],
-		['fruit', 'chocolate', 'tennis', 'Python', 'machine learning', 'design', 'dragons', 'origami', 'kpop']
+		['debugging', 'penspinning', 'eating', 'sleeping', 'daydreaming', 'reading', 'dancing', 'thinking', 'napping'],
+		['kinda', 'really', 'only', 'sort of'],
+		['fruit', 'chocolate', 'tennis', 'Python', 'machine learning', 'design', 'dragons', 'origami', 'kpop', 'poly art']
 	]
 	wordsInd = [0, 0, 0, 0, 0]
 	wordsCurInd = [0, 0, 0, 0, 0]
