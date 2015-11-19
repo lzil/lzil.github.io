@@ -35,7 +35,7 @@ $(document).ready(function() {
     ctx.fillText("i",445, 60);
     ctx.fillText("a",540, 60);
     ctx.fillText("n",640, 60);
-    ctx.fillText("g",740, 60);
+    ctx.fillText("g.",740, 60);
 	function makePoly(x, y, numSides, size, strokeColor, fillColor) {
 		ctx.beginPath();
 		ctx.moveTo (x +  size * Math.cos(0), y +  size *  Math.sin(0));          
