@@ -3,206 +3,194 @@
 <head>
     <link rel="stylesheet" href="fonts/font-awesome-4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="style.css" >
-    <link rel="icon" type="image/png" href="images/lz8.png" >
     <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
-    <script type="text/javascript" src="js/parallax.min.js"></script>
-    <script type="text/javascript" src="js/projects.js"></script>
-    <script type='text/javascript' src='js/words.js'></script>
-    <script type="text/javascript" src="js/contact.js"></script>
-    <script type="text/javascript" src="js/canvas.js"></script>
-    <script type="text/javascript" src="js/responsive.js"></script>
-    <script src="http://zhoul.scripts.mit.edu/fruity.js"></script>
-    <title>Liang Zhou</title>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="http://zhoul.scripts.mit.edu/fruity.js"></script>
+    <title>liang zhou</title>
 </head>
 
-<nav>
-	<ul>
-		<a href="#home"><li class="navbar-left"><img class='navimg' src='images/lz9.png'>liang zhou</li></a>
-		<div class="navbar-right" id='navbar-links-a'>
-			<a href='#iam'><li>who</li></a>
-			<a href="#about"><li>about</li></a>
-			<a href="#projects"><li>projects</li></a>
-			<a href="#contact"><li>contact</li></a>
-        </div>
-        <div class="navbar-right" id='navbar-links-b'>
-            <a><li><i class="fa fa-bars navbar-settings"></i></li></a>
-                <ul class='navbar-dropdown'>
-                    <a href='#iam'><li>who</li></a>
-                    <a href="#about"><li>about</li></a>
-                    <a href="#projects"><li>projects</li></a>
-                    <a href="#contact"><li>contact</li></a>
-                </ul>
-            
-        </div>  
-        
-	</ul>
-</nav>
+<!--
+
+Hi there! Here's some source code for you to read :)
+(note to self to put easter eggs here in the future when I think of them)
+
+-->
 
 <body>
-<div id="home" class="parallax-window" style="height:100vh" data-parallax="scroll" data-image-src="images/titlered.png">
-    <div class="downarrow">
-    	<a href="#iam"><img class="downarrowimage" src="images/down.png"></a>
-    </div>
+
+<!-- navbar -->
+<div class='nav'>
+    <a href='#me'><div class='navtab'><div class='navtext'>me</div></div></a>
+    <a href='#projects'><div class='navtab'><div class='navtext'>projects</div></div></a>
+    <a href='#other'><div class='navtab'><div class='navtext'>other</div></div></a>
 </div>
-<div class='content' id='iam'>
-    <div class='iam'>
-        Hi! I'm a <span class='iam-text' id='iam1'>coder</span><br>
-        who <span class='iam-text' id='iam2'>spends</span> time <span class='iam-text' id='iam3'>dancing</span><br>
-        and <span class='iam-text' id='iam4'>kinda</span> likes <span class='iam-text' id='iam5'>kpop</span><br>
+
+<!-- title page -->
+<div class='page'>
+    <div class='content title'>
+        <div class='name'>
+            <span id='name'>liang zhou</span>
+            <svg class='underName'>
+                <line class='namePath' x1="0" y1="0" x2="400" y2="0" />
+            </svg>
+        </div>
     </div>
 </div>
 
-<div class="parallax-window" style="height:30vh" data-parallax="scroll" data-image-src="images/couplet2.png" id='about'>
-    <div class='parallax-text'>About</div>
-</div>
-<div class="content about">
-        <canvas id="actCanvas" height='100' width='800'></canvas>
-        <p>I'm from sunny (hot) southern California. No, I don't surf, but I do wear shorts and flip flops.</p>
-        <p>I'm an <a class="body-link" href="http://www.theonion.com/article/mit-physicists-split-the-smithereen-3500">MIT</a> student studying Electrical Engineering and Computer Science, which basically means that I drop $60k a year to learn how to move pixels around on my Macbook screen. On campus, I do a lot of random (cool!) things - I help organize <a class="body-link" href="http://dynamit.mit.edu">dynaMIT</a>, I'm Director of Publicity for the <a class="body-link" href="http://adt.mit.edu">Asian Dance Team</a> (watch our videos <a class="body-link" href="https://www.youtube.com/user/MITAsianDanceTeam">here</a>!), and I'm on the <a class="body-link" href="http://eecscon.mit.edu">EECScon</a> program committee.</p>
-        <p>I can twirl pens around my fingers, I'm decent at tennis, and sometimes I make origami. I love running. Long distance. I can't whistle :(</p>
-        <p>My favorite number is 24. I like fruit. And chocolate <3</p>
-        <img src='images/roughmit3.png' class='dragon'> <br>
-        
-</div>
+<hr style='width:20vw;border:1px white solid'>
 
-<div class="parallax-window" style="height:30vh" data-parallax="scroll" data-image-src="images/seat.png" id='projects'>
-    <div class='parallax-text'>Pr<a class="github" href="https://github.com/lzil"><i class="fa fa-github"></i></a>jects</div>
-</div>
-
-<div class="content" style='font-size:0'>
-    <div id="projectIntro">
-        Hover over/click on the tiles to explore some of the projects I've done!<hr style='width:20vw;border:1px black solid'>
-    </div>
-    <ul class='projectIcons'>
-        <li class='project' name='harmony'>
-            <div class='projectLetter'>h</div>
-        </li>
-        <li class='project' name='swerve'>
-            <div class='projectLetter'>s</div>
-        </li>
-        <li class='project' name='micropillar'>
-            <div class='projectLetter'>m</div>
-        </li>
-        <li class='project' name='fruity'>
-            <div class='projectLetter'>f</div>  
-        </li>
-        <li class='project' name='adt'>
-            <div class='projectLetter'>a</div>
-        </li>
-        <li class='project' name='stars'>
-            <div class='projectLetter'>s</div>
-        </li>
-        <li class='project' name='reedr'>
-            <div class='projectLetter'>r</div>
-        </li>
-        <li class='project' name='impression'>
-            <div class='projectLetter'>i</div>  
-        </li>
-        <li class='project' name='resistance'>
-            <div class='projectLetter'>r</div>
-        </li>
-    </ul>
-
-    <div id="projectPlace" class='projectText'>    
-    </div>
-    <div id="harmony" class="projectText">
-        <img class='project-logo' src='images/harmony3.png'><b class="project-title">harmony</b>
-        <p><a class="body-link" href="https://icanphysics.herokuapp.com">Visit the site here!</a></p>
-        <p>A web app that provides a realtime, collaborative music score editor that can be accessed by fellow composers from around the world. In other words, Google Docs for music. Ruby on Rails backend with Firebase API. <b style="color:red">First place</b> in the 2015 MIT 6.470 Web Programming Competition! ^^ I was responsible for the backend development and also acted as team manager.</p>
-        <p><i>Created January 2015 with Monde D, Justin X</i></p>
-    </div>
-    <div id="swerve" class="projectText">
-        <img class='project-logo' src='images/swerve6.png'><b class="project-title">swerve</b>
-        <p><a class="body-link" href="images/Swerve.apk">Download the .apk here!</a></p>
-        <p>An Android app that makes it easy for students to find friends to hang out with by encouraging passive communication. It allows users to share locations, activities, and short statuses with friends and browse a customized newsfeed of friends' statuses. Made for 6.S198: Making Mobile Apps.</p>
-        <p><i>Created spring 2015 with Kevin N, Manting L, Hassan K</i></p>
-    </div>
-    <div id="adt" class="projectText">
-        <img class='project-logo' src='images/adt3.png'><b class="project-title">mit adt website</b>
-        <p><a class="body-link" href="http://adt.mit.edu">Visit the site here!</a></p>
-        <p>A static HTML website overloaded with Javascript and pretty pictures. As Director of Publicity for MIT's Asian Dance Team for fall 2015, I manage and maintain our organization website (hosted by MIT). This semester, I've decided to do a complete redesign of the website, modernizing the look and feel of the site as well as updating a lot of outdated information.</p>
-    </div>
-    <div id="micropillar" class="projectText">
-        <img class='project-logo' src='images/hairs2.jpg'><b class="project-title">3d micropillar modeling</b>
-        <p>As part of a UROP, I'm been working on creating a software suite in Java Processing to model the geometry of high-resolution 3D micropillar structures for visualization and 3D printing. These structures are interesting because of their ability to bend and collectively represent a vector field in their direction of orientation. By inputting a prepared image, we can output a representation of the resultant hair structure based on the image properties. Unfortunately, the code isn't open source :\</p>
-        <p><i>Created with Jifei Ou in MIT Media Lab's Tangible Media group</i></p>
-    </div>
-    <div id="stars" class="projectText">
-        <img class='project-logo' src='images/star.png'><b class="project-title">shoot for the stars</b>
-        <p><a class="body-link" href="https://shoot4stars.herokuapp.com">Visit the site here!</a></p>
-        <p>We created the infrastructure of a platform for primary school teachers to reward students by awarding stars that the students can then redeem for prizes through a customizable 'Star Shop'. I'm working on the design as well as the backend, built in node.js and Express. Made for a Code for a Cause initiative.</p>
-        <p><i>Created summer 2015 with Lily G, Abhay S, Priya S</i></p>
-    </div>
-    <div id="fruity" class="projectText">
-        <img class='project-logo' src='images/fruity.png'><b class="project-title">fruity.js</b>
-        <p><span class='code'>&lt;script src="https://zhoul.scripts.mit.edu/fruity.js"&gt;</span></p>
-        <p>I created a small Javascript library to fruitify your site for fun and because I felt like it. Kinda hard to explain what that means - try typing &nbsp;<span class='code'>fruit</span>. It's uninvertible, however, so you'll have to refresh the page to get everything the way it should be again...</p>
-    </div>
-    <div id="reedr" class="projectText">
-        <img class='project-logo' src='images/question.png'><b class="project-title">reedr</b>
-        <p><a class='body-link' href='https://github.com/turbomaze/reedr'>See the source code here!</a></p>
-        <p>For YHack 2015, my team created a vanilla Javascript application that takes in an image of text (i.e. a page from a book) and performs word segmentation (not OCR - we simply recognize blocks of words, not the characters themselves) and orders those words for potential word division. The original idea was to apply this to speed reading, in a similar vein to existing programs like Spreedr. We won the prize for the <b style='color:red'>Best Hack under 4kb</b> from Datto!</p>
-        <p><i>Created fall 2015 with Vahid F, Anthony L</i></p>
-    </div>
-    <div id="impression" class="projectText">
-        <img class='project-logo' src='images/question.png'><b class="project-title">impression</b>
-        <p><a class="body-link" href="https://much-impression.herokuapp.com">Visit the site here!</a> (although it's broken right now)</p>
-        <p>My project for HackMIT 2015 - our app takes in an image and outputs a short playlist of songs recommended for you (depending on the image uploaded). Impression makes use of the Clairfai API to extract descriptor words from the image, runs an NLP script to transform those descriptors to emotion, then calls the EchoNest + iTunes APIs to create and display the playlist.</p>
-        <p><i>Created fall 2015 with Ajay S, Monde D, Courtney G</i></p>
-    </div>
-    <div id="resistance" class="projectText">
-        <img class='project-logo' src='images/question.png'><b class="project-title">resistance</b>
-        <p>A project under construction, this is an AI + platform to play the game called Resistance (the Avalon variant, including Merlin/Morgana/etc.) with the CPU. Will be finished by the winter!</p>
-    </div>
-    <div id="clairvoyance" class="projectText">
-        <img class='project-logo' src='images/question.png'><b class="project-title">clairvoyance</b>
-        <p>This is a project still under the early stages of ideation/planning ;)</p>
-    </div>
-</div>
-
-<div class="parallax-window" style="height:30vh" data-parallax="scroll" data-image-src="images/mountainzt2.png" id='contact'>
-    <div class='parallax-text'>Contact</div>
-</div>
-
-<div class="content">
-        <p style='text-align:center;font-size:24px'>Questions? Comments? Project suggestions? Let me know by filling out the form below!</p>
-        <form id="contactForm" name="contactform" action="contact.php" method="post" >
-            <div class="contactInput">
-                <input type="text" id="name" name="name" placeholder="name" required><br/>
-                <input type="text" id="email" name="email" placeholder="email" required><br/>
-                <input type="text" id="subject" name="subject" placeholder="subject" required><br/>
-                <textarea id="message" name="message" rows="6" placeholder="type your message here!" required></textarea><br/>
-                <span><button class="submitContact" type="submit" name="formSubmitted">Send! <i class="fa fa-paper-plane"></i></button></span>
-                <span><button class="clearContact" type="reset">Clear</button></span>
+<!-- about me page -->
+<div class='page' id='me'>
+    <div class='content me'>
+        <div>
+            <div class='shortcut'>
+                daydreaming enthusiast.
             </div>
-            <br/>
-            <div id="formResponse" style="display: none;"></div>
-        </form>
+            <div class='shortcut'>
+                practicing student.
+            </div>
+            <div class='shortcut'>
+                fruit lover.
+            </div>
+            <p>
+                hi! i'm liang, an <a class="body-link" href="http://www.theonion.com/article/mit-physicists-split-the-smithereen-3500">mit</a> student doubling in eecs and bcs. at the moment, this basically means that i drop ~$60k a year to learn how to move pixels around on my macbook screen while trying to figure out how these same pixels might model our brains. on campus, i've been part of a bunch of student groups and activities, including <a class="body-link" href="http://eecscon.mit.edu">eecscon</a>, <a class="body-link" href="http://adt.mit.edu">mit asian dance team</a>, <a class="body-link" href="dynamit.mit.edu">dynamit</a>, and <a class="body-link" href="http://www.makemit.org">makemit</a>. currently, i'm interning at <a class='body-link' href='http://www.fruitsinfo.com/apples.php'>apple</a> on the siri speech engineering team.
+            </p>
+            <p>
+                i'm originally from sunny (hot) southern california. i can twirl pens around my fingers, and am a fan of tennis, origami, and boba. i love running, long distance. i can't whistle :(
+            </p>
+            <p>
+                my favorite number is 24. i like fruit. and chocolate :D
+            </p>
+        </div>
+    </div>
 </div>
 
-<div class="parallax-window" style="height:20vh" data-parallax="scroll" data-image-src="images/sunsetzt2.png"id='projects'>
-    <div class='parallax-text' id='contact-icons'><i class='fa fa-circle-o contact-icon'></i> <i class='fa fa-circle-o contact-icon'></i> <i class='fa fa-circle-o contact-icon'></i></div>
+<hr style='width:20vw;border:1px white solid'>
+
+<!-- projects page -->
+<div class='page' id='projects'>
+    <div class='content projects'>
+        <br><br><br>
+        <div id="projectIntro">
+            here are some things i've worked on!
+        </div>
+        <br>
+        <ul class='projectIcons'>
+            <li class='project' name='harmony'>
+                <div class='projectLetter'>h</div>
+            </li>
+            <li class='project' name='swerve'>
+                <div class='projectLetter'>s</div>
+            </li>
+            <li class='project' name='micropillar'>
+                <div class='projectLetter'>m</div>
+            </li>
+            <li class='project' name='fruity'>
+                <div class='projectLetter'>f</div>  
+            </li>
+            <li class='project' name='adt'>
+                <div class='projectLetter'>a</div>
+            </li>
+            <li class='project' name='stars'>
+                <div class='projectLetter'>s</div>
+            </li>
+            <li class='project' name='reedr'>
+                <div class='projectLetter'>r</div>
+            </li>
+            <li class='project' name='impression'>
+                <div class='projectLetter'>i</div>  
+            </li>
+            <li class='project' name='plzplay'>
+                <div class='projectLetter'>p</div>
+            </li>
+        </ul>
+        <br>
+        <div id="projectPlace" class='projectText'>    
+        </div>
+        <div id="harmony" class="projectText">
+            <img class='project-logo' src='images/harmony.png'><b class="project-title">harmony</b>
+            <p><a class="body-link" href="https://icanphysics.herokuapp.com">link to site</a></p>
+            <p>a web app that provides a collaborative music score editor that can be accessed in realtime by fellow composers from wherever they may be. in other words, google docs for music. made with ruby on rails backend with firebase api. the site won <span class='boldy'>first place</span> in the 2015 mit 6.470 web programming competition ^^ i was responsible for the backend development and also acted as team manager.</p>
+            <p><i>january 2015 with monde d, justin x</i></p>
+        </div>
+        <div id="swerve" class="projectText">
+            <img class='project-logo' src='images/swerve.png'><b class="project-title">swerve</b>
+            <p><a class="body-link" href="images/Swerve.apk">link to .apk</a></p>
+            <p>an android app that makes it easy for students to find friends to hang out with by encouraging passive communication. allows users to share locations, activities, and short statuses with friends and browse a customized newsfeed of friends' statuses. made for 6.s198: making mobile apps.</p>
+            <p><i>spring 2015 with kevin n, manting l, hassan k</i></p>
+        </div>
+        <div id="adt" class="projectText">
+            <img class='project-logo' src='images/adt.png'><b class="project-title">mit adt website</b>
+            <p><a class="body-link" href="http://adt.mit.edu">link to site</a></p>
+            <p>a static html website overloaded with javascript and pretty pictures. over the 2015-2016 school year, i maintained the organization website for mit's asian dance team, including updating information and showcases. over the summer, i decided to do a complete redesign of the site, modernizing the look and feel as well as updating/removing a lot of outdated information. the old site is at /old_site</p>
+        </div>
+        <div id="micropillar" class="projectText">
+            <img class='project-logo' src='images/hairs.png'><b class="project-title">3d micropillar modeling</b>
+            <p><a href='http://dl.acm.org/citation.cfm?id=2817812' class='body-link'>the conference paper</a></p>
+            <p>as part of a urop, i created a software suite in java processing to model the geometry of high-resolution 3d micropillar structures for visualization and 3d printing. these structures are interesting because of their ability to bend and collectively represent a vector field in their direction of orientation. by inputting a prepared image, we can output a representation of the resultant hair structure based on the image properties. it's now patented!</p>
+            <p><i>spring 2015 with jifei ou in mit media lab's tangible media group</i></p>
+        </div>
+        <div id="stars" class="projectText">
+            <img class='project-logo' src='images/star.png'><b class="project-title">shoot for the stars</b>
+            <p><a class="body-link" href="https://shoot4stars.herokuapp.com">link to site</a></p>
+            <p>we created the infrastructure of a platform for primary school teachers to reward students by awarding stars that students can then redeem for prizes through a customizable 'star shop'. i worked on the design as well as the backend, built in node.js + express. made for code for a cause.</p>
+            <p><i>summer 2015 with lily g, abhay s, priya s</i></p>
+        </div>
+        <div id="fruity" class="projectText">
+            <img class='project-logo' src='images/fruity.png'><b class="project-title">fruity.js</b>
+            <p><span class='code'>&lt;script src="https://zhoul.scripts.mit.edu/fruity.js"&gt;</span></p>
+            <p>it's a small javascript library to fruitify your site for fun! try it out here by typing &nbsp;<span class='code'>fruit</span>. it's uninvertible, though, so you'll have to refresh the page to get everything the way it should be again :o</p>
+        </div>
+        <div id="reedr" class="projectText">
+            <img class='project-logo' src='images/question.png'><b class="project-title">reedr</b>
+            <p><a class='body-link' href='https://github.com/turbomaze/reedr'>source code on github</a></p>
+            <p>For yhack 2015, we created a vanilla javascript app that takes in an image of text (i.e. a page from a book) and performs word segmentation (not ocr - it simply recognize blocks of words, not the characters themselves) and orders those words for potential word division. The original idea was to apply this to speed reading. we won the prize for the <span class='boldy'>best hack under 4kb</span> from datto!</p>
+            <p><i>fall 2015 with vahid f, anthony l</i></p>
+        </div>
+        <div id="impression" class="projectText">
+            <img class='project-logo' src='images/question.png'><b class="project-title">impression</b>
+            <p><a class="body-link" href="https://much-impression.herokuapp.com">link to (broken) site</a></p>
+            <p>a project for hackmit 2015 - the app takes in an image and outputs a short playlist of songs recommended for you (depending on the image uploaded). impression makes use of the clarifai api to extract descriptor words from the image, runs an nlp script to transform those descriptors to emotion, then calls the echonest + itunes apis to create and display the playlist.</p>
+            <p><i>fall 2015 with ajay s, monde d, courtney g</i></p>
+        </div>
+        <div id="plzplay" class="projectText">
+            <img class='project-logo' src='images/pusheen.png'><b class="project-title">plzplaywith.me</b>
+            <p><a class='body-link' href='https://plzplaywith.me'>plz play with me <3</a></p>
+        </div>
+    </div>
 </div>
 
-<div id="bottom" class="content">
-        <p style='text-align:center'>You've reached the bottom of my site! &nbsp;. &nbsp;. &nbsp;<a href='#home' class='up'><i class='fa fa-level-up'style='text-decoration:none;color:black'></i></a></p>
+<hr style='width:20vw;border:1px white solid'>
+
+<!-- other things page -->
+<div class='page' id='other'>
+    <div class='content other'>
+        <br><br><br>
+        <p>
+            random stuff to be updated in this portion! not much content yet.
+        </p>
+        <p>
+            last updated 1 july 2016. old site designs coming soon
+        </p>
+        <p>
+            contact me at zh [shift+2] mit [dot] edu
+        </p>
+        <p>
+            (obligatory) made with &hearts; by liang
+        </p>
+    </div>
 </div>
 
-<footer>
-    <ul>
-        <li class='navbar-left'>made with &nbsp;<i class='fa fa-heart' style='font-size:12px'></i>&nbsp; by liang</li>
-        <li class='navbar-right' style='margin-right:30px'><a href="/old_site" class='body-link'>old site</a></li>
-    </ul>
-</footer>
-
+<!-- google analytics -->
 <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-65259513-1', 'auto');
-  ga('send', 'pageview');
+    ga('create', 'UA-65259513-1', 'auto');
+    ga('send', 'pageview');
 </script>
+
 </body>
 </html>
