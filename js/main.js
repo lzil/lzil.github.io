@@ -1,4 +1,7 @@
 $(document).ready(function() {
+	/*
+	project icon hovering effects
+	*/
 	var hoverLabel = $('#projectPlace');
 	var curClick = $('.project[name=harmony]')[0];
 	$(curClick).css({'background-color': 'white', 'color': 'black'})
@@ -29,10 +32,10 @@ $(document).ready(function() {
 			hoverLabel = $('#'+proj);
 		}
 	})
-})
 
-
-$(document).ready(function() {
+	/*
+	clicking navbar effects
+	*/
 	$('a[href*=#]:not([href=#])').click(function() {
 		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
 			var target = $(this.hash);
@@ -46,23 +49,31 @@ $(document).ready(function() {
 		}
 	});
 
+	/*
+	name underline animation
+	*/
 	$('#name').hover(function() {
 		$('.underName').css({'width': '300px', 'stroke-width': '3px'});
 	}, function() {
 		$('.underName').css({'width': '0px', 'stroke-width': '0px'});
 	});
-		
+	
+	/*
+	browsers and name outline lol
+	*/
 	var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
 	var isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
-
 	if (isChrome) {
 		$('.name').css({'-webkit-text-stroke': '0.1px white'})
 	}
 	if (isFirefox) {
 		$('.name').css({'text-shadow': '-1px 0 0 #fff'})
 	}
-});
+})
 
+/*
+Right-hand side navbar effects
+*/
 
 tab = 0;
 
@@ -101,7 +112,6 @@ $(document).scroll(function() {
 			tab = 0;
 		}
 	}
-
 })
 
 var resetNav = function() {
