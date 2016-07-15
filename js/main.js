@@ -3,11 +3,7 @@ $(document).ready(function() {
 	project icon hovering effects
 	*/
 	var hoverLabel = $('#projectPlace');
-	var curClick = $('.project[name=harmony]')[0];
-	$(curClick).css({'background-color': 'white', 'color': 'black'})
-	var proj = $(curClick).attr('name');
-	$('#'+proj).css('display', 'inline-block');
-	hoverLabel = $('#'+proj);
+	var curClick = null;
 	$('.project').hover(function() {
 		hoverLabel.hide();
 		proj = $(this).attr('name');
@@ -83,32 +79,34 @@ $(document).scroll(function() {
 
 	var me = document.getElementById('me');
 	var projects = document.getElementById('projects');
-	var other = document.getElementById('other');
+	var random = document.getElementById('random');
 
-	if ($(document).scrollTop() >= other.offsetTop - h/2) {
+	if ($(document).scrollTop() >= random.offsetTop - h/2) {
 		if (tab != 3) {
 			resetNav();
 			tab = 3;
 			$('.navtext:eq(2)').css({'color': 'white'})
-			$('.navtab:eq(2)').css({"background-color":'black'})
+			$('.navtab:eq(2)').css({"background-color":'#060606'})
 		}
 	} else if ($(document).scrollTop() >= projects.offsetTop - h/2) {
 		if (tab != 2) {
 			resetNav();
 			tab = 2;
 			$('.navtext:eq(1)').css({'color': 'white'})
-			$('.navtab:eq(1)').css({"background-color":'black'})
+			$('.navtab:eq(1)').css({"background-color":'#060606'})
 		}
 	} else if ($(document).scrollTop() >= me.offsetTop - h/2) {
 		if (tab != 1) {
+			$('.navtab').css({'background-color': 'white'})
 			resetNav();
 			tab = 1;
 			$('.navtext:eq(0)').css({'color': 'white'})
-			$('.navtab:eq(0)').css({"background-color":'black'})
+			$('.navtab:eq(0)').css({"background-color":'#060606'})
 		}
 	} else if ($(document).scrollTop() < h/2) {
 		if (tab != 0) {
 			resetNav();
+			$('.navtab').css({'background-color': '#060606'})
 			tab = 0;
 		}
 	}
