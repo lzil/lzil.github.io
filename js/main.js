@@ -1,4 +1,6 @@
 $(document).ready(function() {
+	resizeWin();
+
 	/*
 	project icon hovering effects
 	*/
@@ -49,7 +51,11 @@ $(document).ready(function() {
 	name underline animation
 	*/
 	$('#name').hover(function() {
-		$('.underName').css({'width': '300px', 'stroke-width': '3px'});
+		if (window.innerWidth > 524) {
+			$('.underName').css({'width': '300px', 'stroke-width': '3px'});
+		} else {
+			$('.underName').css({'width': '200px', 'stroke-width': '3px'});
+		}
 	}, function() {
 		$('.underName').css({'width': '0px', 'stroke-width': '0px'});
 	});
@@ -112,8 +118,22 @@ $(document).scroll(function() {
 	}
 })
 
+$(window).resize(function() {
+	resizeWin();
+})
+
 var resetNav = function() {
 	$('.navtext').css({'color': '#060606'})
 	$('.navtab').css({'background-color': 'white', 'outline-color': 'black'})
 }
+
+var resizeWin = function() {
+	var w = window.innerWidth;
+	if (w < 500) {
+		$('.nav').css({'display':'none'})
+	} else {
+		$('.nav').css({'display':'block'})
+	}
+}
+
 
