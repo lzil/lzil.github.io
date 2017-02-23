@@ -51,7 +51,7 @@ hi there here's some source code
                 sleeps at night.
             </div>
             <p>
-                hi! i'm liang, an <a class="body-link" href="http://www.theonion.com/article/mit-physicists-split-the-smithereen-3500">mit</a> student studying <a class='body-link' href='https://www.eecs.mit.edu'>eecs</a> and <a class='body-link' href='http://bcs.mit.edu'>bcs</a>. this basically means that i drop ~$60k a year to learn how to move pixels around on my macbook screen while trying to figure out how these same pixels might model our brains. on campus, i've been part of a bunch of student groups, including <a class="body-link" href="http://eecscon.mit.edu">eecscon</a>, <a class="body-link" href="http://adt.mit.edu">mit asian dance team</a>, <a class="body-link" href="http://dynamit.mit.edu">dynamit</a>, <a class="body-link" href="http://web.mit.edu/savetfp/SaveTFP/Home.html">savetfp</a> and <a class="body-link" href="http://www.makemit.org">makemit</a>. this past summer, i interned at <a class='body-link' href='http://www.fruitsinfo.com/apples.php'>apple</a> on the siri speech engineering team.
+                hi! i'm liang, an <a class="body-link" href="http://www.theonion.com/article/mit-physicists-split-the-smithereen-3500">mit</a> student studying <a class='body-link' href='https://www.eecs.mit.edu'>eecs</a> and <a class='body-link' href='http://bcs.mit.edu'>bcs</a>. this basically means that i drop ~$60k a year to learn how to move pixels around on my macbook screen while trying to figure out how these same pixels might model our brains. on campus, i've been part of a bunch of student groups, including <a class="body-link" href="http://eecscon.mit.edu">eecscon</a>, <a class="body-link" href="http://dancetroupe.mit.edu">dancetroupe</a>, <a class="body-link" href="http://adt.mit.edu">mit asian dance team</a>, <a class="body-link" href="http://dynamit.mit.edu">dynamit</a>, <a class="body-link" href="http://web.mit.edu/savetfp/SaveTFP/Home.html">savetfp</a> and <a class="body-link" href="http://www.makemit.org">makemit</a>. this past summer, i interned at <a class='body-link' href='http://www.fruitsinfo.com/apples.php'>apple</a> on the siri speech engineering team.
             </p>
             <p>
                 i'm originally from sunny southern california. i can twirl pens around my fingers and am a boba fan. i also like to run a lot. i can't whistle :(
@@ -74,24 +74,30 @@ hi there here's some source code
         </div>
         <br>
         <ul class='projectIcons'>
+            <li class='project' name='towers'>
+                <div class='projectLetter'>t</div>
+            </li>
+            <li class='project' name='streaming'>
+                <div class='projectLetter'>s</div>
+            </li>
+            <li class='project' name='micropillar'>
+                <div class='projectLetter'>m</div>
+            </li>
             <li class='project' name='harmony'>
                 <div class='projectLetter'>h</div>
             </li>
             <li class='project' name='swerve'>
                 <div class='projectLetter'>s</div>
             </li>
-            <li class='project' name='micropillar'>
-                <div class='projectLetter'>m</div>
-            </li>
-            <li class='project' name='fruity'>
+            <!-- <li class='project' name='fruity'>
                 <div class='projectLetter'>f</div>  
-            </li>
+            </li> -->
             <li class='project' name='adt'>
                 <div class='projectLetter'>a</div>
             </li>
-            <li class='project' name='stars'>
+            <!-- <li class='project' name='stars'>
                 <div class='projectLetter'>s</div>
-            </li>
+            </li> -->
             <li class='project' name='reedr'>
                 <div class='projectLetter'>r</div>
             </li>
@@ -115,6 +121,24 @@ hi there here's some source code
         <br>
         <div id="projectPlace" class='projectText'>    
         </div>
+        <div id="towers" class="projectText">
+            <img class='project-logo' src='images/towers.png'><b class="project-title">tower counterfactuals</b>
+            <p><a class="body-link" href="towers/physics_interface.html">link to trial visualizations</a></p>
+            <p>we've recently submitted a paper for a research project i've been part of for the past year or so, in mit's computational cognitive science lab under prof josh tenenbaum. the goal is to model people's judgments of stability by generating noisy simulations of brick towers and designating a particular "special" brick to remove. we ran several amazon mturk experiments to sample human judgment.</p>
+            <p><i>2016 + 2017 with tobi g</i></p>
+        </div>
+        <div id="streaming" class="projectText">
+            <img class='project-logo' src='images/streaming.png'><b class="project-title">streaming normalization</b>
+            <p>paper in progress</p>
+            <p>we're experimenting with a new normalization method in neural nets called streaming normalization, which is a generalization of familiar methods like batch and layer normalization, as well as with decoupled/delayed accumulation and update of gradients. these methods have already been published, but we have been testing further (to be revealed) extensions.</p>
+            <p><i>2016 + 2017 with qianli l</i></p>
+        </div>
+        <div id="micropillar" class="projectText">
+            <img class='project-logo' src='images/hairs.png'><b class="project-title">3d micropillar modeling</b>
+            <p><a href='http://dl.acm.org/citation.cfm?id=2817812' class='body-link'>the conference paper</a></p>
+            <p>as part of a urop, i created a java processing suite to model the geometry of 3d-printed high-resolution micropillar structures. these structures have a collective ability to bend and represent a vector field in their direction of orientation. by inputting a prepared image, we can output a representation of the resultant hair structure based on image properties. it's now patented!</p>
+            <p><i>spring 2015 with jifei ou in mit media lab's tangible media group</i></p>
+        </div>
         <div id="harmony" class="projectText">
             <img class='project-logo' src='images/harmony.png'><b class="project-title">harmony</b>
             <p><a class="body-link" href="https://icanphysics.herokuapp.com">link to site</a></p>
@@ -131,12 +155,6 @@ hi there here's some source code
             <img class='project-logo' src='images/adt.png'><b class="project-title">mit adt website</b>
             <p><a class="body-link" href="http://adt.mit.edu">link to site</a></p>
             <p>a static html website loaded with javascript and pretty pictures. over the 2015-2016 school year, i maintained the organization website for mit's asian dance team and decided to do a complete redesign of the site, modernizing the look and feel as well as updating/removing outdated information. old site is at /old_site</p>
-        </div>
-        <div id="micropillar" class="projectText">
-            <img class='project-logo' src='images/hairs.png'><b class="project-title">3d micropillar modeling</b>
-            <p><a href='http://dl.acm.org/citation.cfm?id=2817812' class='body-link'>the conference paper</a></p>
-            <p>as part of a urop, i created a software suite in java processing to model the geometry of 3d-printed high-resolution micropillar structures. these structures have a collective ability to bend and represent a vector field in their direction of orientation. by inputting a prepared image, we can output a representation of the resultant hair structure based on image properties. it's now patented!</p>
-            <p><i>spring 2015 with jifei ou in mit media lab's tangible media group</i></p>
         </div>
         <div id="stars" class="projectText">
             <img class='project-logo' src='images/star.png'><b class="project-title">shoot for the stars</b>
@@ -193,12 +211,13 @@ hi there here's some source code
         | |
         <p><a class='body-link' href='plzplaywithme/index.html'>plz play with me &lt;3</a></p>
         <p><a class='body-link' href='images/title.png'>old site front-page design</a></p>
+        <p>type <span class='code'>fruit</span> to fruitify this site</p>
         | |
         <p>
             contact me at zh [shift+2] mit [dot] edu
         </p>
         <p>
-            last updated 28 december 2016 &nbsp;| &nbsp;(obligatory) made with <i class="fa fa-heart" aria-hidden="true"></i> by liang
+            last updated 23 february 2017 &nbsp;| &nbsp;(obligatory) made with <i class="fa fa-heart" aria-hidden="true"></i> by liang
         </p>
     </div>
 </div>
