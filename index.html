@@ -20,20 +20,27 @@ hi there here's some source code
 <body>
 
 <!-- navbar -->
-<div class='nav'>
+<!-- <div class='nav'>
     <a href='#me'><div class='navtab'><div class='navtext'>me</div></div></a>
     <a href='#projects'><div class='navtab'><div class='navtext'>projects</div></div></a>
     <a href='#random'><div class='navtab'><div class='navtext'>random</div></div></a>
-</div>
+</div> -->
 
 <!-- title page -->
-<div class='page'>
+<div class='page'style='height:20vh'>
     <div class='content title'>
         <div class='name'>
+            <div>
             <span id='name'>liang zhou</span>
             <svg class='underName'>
                 <line class='namePath' x1="0" y1="0" x2="400" y2="0" />
             </svg>
+        </div>
+        </div>
+        <div id='title-labels'>
+            <a class='title-label' href='#me'>about</a>
+            <a class='title-label' href='#projects'>projects</a>
+            <a class='title-label' href='#random'>random</a>
         </div>
     </div>
 </div>
@@ -45,18 +52,17 @@ hi there here's some source code
     <div class='content me'>
         <div>
             <div class='shortcut'>
-                daydreams by day,
-            </div>
-            <div class='shortcut'>
-                sleeps at night.
+                a short bio
             </div>
             <p>
-                hi! i'm liang, an <a class="body-link" href="http://www.theonion.com/article/mit-physicists-split-the-smithereen-3500">mit</a> senior studying <a class='body-link' href='http://bcs.mit.edu'>bcs</a> and <a class='body-link' href='https://www.eecs.mit.edu'>eecs</a>. what this means is that i'm fascinated by how people think, and in my research i create computational models of human decision-making. this also means i often delve into related topics such as psychology, philosophy, and ai + machine learning. i work with josh tenenbaum in the <a class="body-link" href="http://cocosci.mit.edu">cocosci</a> lab.
-
-                on campus, i've been part of groups such as <a class="body-link" href="http://eecscon.mit.edu">eecscon</a>, <a class="body-link" href="http://dancetroupe.mit.edu">dancetroupe</a>, <a class="body-link" href="http://adt.mit.edu">mit asian dance team</a>, <a class="body-link" href="http://dynamit.mit.edu">dynamit</a>, <a class="body-link" href="http://web.mit.edu/savetfp/SaveTFP/Home.html">savetfp</a> and <a class="body-link" href="http://www.makemit.org">makemit</a>.
+                hi! i'm liang, and i like to daydream.
             </p>
             <p>
-                i'm from sunny southern california. i can twirl pens around my fingers and fold origami dragons. i enjoy running and dancing, and my favorite number if 24. i can't whistle :(
+
+                i'm a grad student at the gatsby unit at ucl. previously, i studied <a class='body-link' href='http://bcs.mit.edu'>bcs</a> and <a class='body-link' href='https://www.eecs.mit.edu'>eecs</a> at <a class="body-link" href="http://www.theonion.com/article/mit-physicists-split-the-smithereen-3500">mit</a>. i'm fascinated by how people think, particularly in how we feel emotions and make decisions. i also dabble into related topics such as psychology, philosophy, economics, and ai + machine learning. at mit, i did research with josh tenenbaum in the <a class="body-link" href="http://cocosci.mit.edu">cocosci</a> lab and was part of <a class="body-link" href="http://eecscon.mit.edu">eecscon</a>, <a class="body-link">movementality</a>, <a class="body-link" href="http://dancetroupe.mit.edu">dancetroupe</a>, <a class="body-link" href="http://adt.mit.edu">mit adt</a>, <a class="body-link" href="http://dynamit.mit.edu">dynamit</a>, <a class="body-link" href="http://web.mit.edu/savetfp/SaveTFP/Home.html">savetfp</a> and <a class="body-link" href="http://www.makemit.org">makemit</a>.
+            </p>
+            <p>
+                i'm from sunny southern california. i can twirl pens around my fingers and fold origami dragons. i enjoy running and dancing, and my favorite number is 24. i can't whistle :(
             </p>
         </div>
     </div>
@@ -68,8 +74,8 @@ hi there here's some source code
 <div class='page' id='projects'>
     <div class='content projects'>
         <br><br><br>
-        <div id="projectIntro">
-            here are some things i've worked on!
+        <div class="shortcut">
+            selected projects i've worked on
         </div>
         <br>
         <ul class='projectIcons'>
@@ -123,15 +129,15 @@ hi there here's some source code
         <div id="towers" class="projectText">
             <img class='project-logo' src='images/towers.png'><b class="project-title">tower counterfactuals</b>
             <p><a class="body-link" href="towers/towers.pdf">our paper</a> <a class="body-link" href="towers/physics_interface.html">trial visualizations</a></p>
-            <p>we submitted to and were accepted as a talk at cogsci for a research project in mit's computational cognitive science lab under prof josh tenenbaum. the goal is to model people's counterfactual judgments of stability by generating noisy simulations of brick towers and designating a particular "special" brick to remove. we ran several amazon mturk experiments to sample human judgment.</p>
+            <p>submitted and accepted as a talk at cogsci. the goal is to model people's counterfactual judgments of stability by generating noisy simulations of brick towers and designating a particular "special" brick to remove. we ran several amazon mturk experiments to sample human judgment and created a noisy simulation model that better represented people's intuitive judgments.</p>
             <p><i>2016 + 2017 with tobi g</i></p>
         </div>
-        <div id="streaming" class="projectText">
+        <!-- <div id="streaming" class="projectText">
             <img class='project-logo' src='images/streaming.png'><b class="project-title">streaming normalization</b>
-            <!-- p>source code on github</p-->
+            <p>source code on github</p>
             <p>we experimented with a new normalization method in recurrent neural nets called streaming normalization, which is a generalization of familiar methods like batch and layer normalization, as well as with decoupled/delayed accumulation and update of gradients. these methods have already been published, but we have been testing further (to be revealed) extensions.</p>
             <p><i>2016 with qianli l</i></p>
-        </div>
+        </div> -->
         <div id="micropillar" class="projectText">
             <img class='project-logo' src='images/hairs.png'><b class="project-title">3d micropillar modeling</b>
             <p><a href='http://dl.acm.org/citation.cfm?id=2817812' class='body-link'>the conference paper</a></p>
@@ -153,19 +159,19 @@ hi there here's some source code
         <div id="adt" class="projectText">
             <img class='project-logo' src='images/adt.png'><b class="project-title">mit adt website</b>
             <p><a class="body-link" href="http://adt.mit.edu">link to site</a></p>
-            <p>a static html website loaded with javascript and pretty pictures. over the 2015-2016 school year, i maintained the organization website for mit's asian dance team and decided to do a complete redesign of the site, modernizing the look and feel as well as updating/removing outdated information. old site is at /old_site</p>
+            <p>a static html website loaded with javascript and pretty pictures. over the 2015-2016 school year, i maintained the organization website for mit's asian dance team and decided to do a complete redesign of the site, modernizing the look and feel as well as updating/removing outdated information. site has since been updated; old site at /v2</p>
         </div>
-        <div id="stars" class="projectText">
+        <!-- <div id="stars" class="projectText">
             <img class='project-logo' src='images/star.png'><b class="project-title">shoot for the stars</b>
             <p><a class="body-link" href="https://shoot4stars.herokuapp.com">link to site</a></p>
             <p>we created the infrastructure of a platform for primary school teachers to reward students by awarding stars that students can then redeem for prizes through a customizable 'star shop'. i worked on the design as well as the backend, built in node.js + express. made for code for a cause.</p>
             <p><i>summer 2015 with lily g, abhay s, priya s</i></p>
-        </div>
-        <div id="fruity" class="projectText">
+        </div> -->
+        <!-- <div id="fruity" class="projectText">
             <img class='project-logo' src='images/fruity.png'><b class="project-title">fruity.js</b>
             <p><a class='body-link' href='https://github.com/lzil/fruity.js'>source code on github</a></p>
             <p>it's a small javascript library to fruitify your site for fun! try it out here by typing <span class='code'>fruit</span>. it's uninvertible, though, so you'll have to refresh the page to get everything the way it should be again :o</p>
-        </div>
+        </div> -->
         <div id="reedr" class="projectText">
             <!--img class='project-logo' src='images/question.png'--><b class="project-title">reedr</b>
             <p><a class='body-link' href='https://github.com/turbomaze/reedr'>source code on github</a></p>
@@ -178,23 +184,23 @@ hi there here's some source code
             <p>image feature detection, for any feature you like. given an picture and an adjective, textura will tell you how well your adjective describes your picture on a scale of 0 to 1. it automatically scrapes the web for images that match the adjective, trains a convolutional neural net based on these images, and returns a value. the model can then be cached for future use!</p>
             <p><i>fall 2016 with tony z, rachel w, grace y</i></p>
         </div>
-        <div id="darwin" class="projectText">
-            <!--img class='project-logo' src='images/question.png'--><b class="project-title">darwin</b>
+        <!-- <div id="darwin" class="projectText">
+            <img class='project-logo' src='images/question.png'><b class="project-title">darwin</b>
             <p><a class='body-link' href='https://github.com/rliu42/6864-project'>source code on github</a></p>
             <p>do this later</p>
             <p><i>fall 2015 with runpeng l</i></p>
-        </div>
+        </div> -->
         <div id="impression" class="projectText">
             <!--img class='project-logo' src='images/question.png'--><b class="project-title">impression</b>
             <p><a class="body-link" href="https://github.com/lzil/impression">source code on github</a></p>
             <p>a project for hackmit 2015 - the app takes in an image and outputs a short playlist of songs recommended for you based on the uploaded image. impression makes use of several apis to extract descriptor words from the image, runs an nlp script to transform those descriptors to emotion, then calls some more apis to create and display the playlist.</p>
             <p><i>fall 2015 with ajay s, monde d, courtney g</i></p>
         </div>
-        <div id="plzplay" class="projectText">
+        <!-- <div id="plzplay" class="projectText">
             <img class='project-logo' src='images/pusheen.png'><b class="project-title">plzplaywith.me</b>
             <p><a class='body-link' href='plzplaywithme/index.html'>plz play with me <3</a></p>
             <p>it used to have its own domain name (plzplaywith.me) but i took that down :(</p>
-        </div>
+        </div> -->
     </div>
 </div>
 
@@ -203,21 +209,18 @@ hi there here's some source code
 <!-- other things page -->
 <div class='page' id='random'>
     <div class='content random'>
+        <div class='shortcut'>
+            random snippets
+        </div>
         <br><br><br>
-        <p>
-            random stuff to be updated in this portion! not much here yet.
-        </p>
-        | |
+        <p><a class='body-link' href="http://news.mit.edu/2018/student-profile-liang-zhou-0202">mit news marshall bio</a></p>
         <p><a class='body-link' href='plzplaywithme/index.html'>plz play with me &lt;3</a></p>
         <p><a class='body-link' href='images/title.png'>old site front-page design</a></p>
         <p><a class='body-link' href='https://www.aapt.org/physicsteam/2014/team.cfm?id=926'>physics team bio</a></p>
         <p>type <span class='code'>fruit</span> to fruitify this site</p>
-        | |
+        <br>
         <p>
-            contact me at zh [shift+2] mit [dot] edu
-        </p>
-        <p>
-            last updated 9 january 2018 &nbsp;| &nbsp;(obligatory) made with <i class="fa fa-heart" aria-hidden="true"></i> by liang
+            zh [shift+2] mit [dot] edu &nbsp; | &nbsp; last updated 22 june 2018
         </p>
     </div>
 </div>
