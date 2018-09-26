@@ -148,9 +148,11 @@ var resizeWin = function() {
 	if (bw < 880) {
 		$('#menu').css({'text-align': 'center', 'width': '100%'})
 		$('#content').css({'width': '100%', 'padding': 0})
+		$('.underName').css({'margin': 'auto'})
 	} else {
 		$('#menu').css({'text-align': 'right', 'width': '30%'})
 		$('#content').css({'width': '60%', 'padding-left': '5%'})
+		$('.underName').css({'margin': '0 2px 0 auto'})
 	}
 }
 

@@ -113,7 +113,7 @@ a:focus {
 
 .content {
   	text-align:center;
-  	margin:5%;
+  	margin:40px 5%;
   	display:block;
 }
 
@@ -171,13 +171,16 @@ a:focus {
 .project-logo {
 	border:2.5px var(--color-text) solid;
 	border-radius:50%;
-	margin-bottom: -16px;
-	width:60px;
+	margin-bottom: -12px;
+
+	width:50px;
 	transition: all .4s ease-in-out;
 }
+
 .project-title {
 	font-size:32px;
 	margin-left:10px;
+	line-height: 40px;
 }
 
 .code {
