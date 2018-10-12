@@ -31,6 +31,10 @@ body {
 	font-size:18px;
 }
 
+.no-kerning {
+	letter-spacing:0;
+}
+
 
 #menu {
 	vertical-align:top;
