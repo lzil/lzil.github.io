@@ -93,5 +93,3 @@ var resizeWin = function() {
 		$('.underName').css({'margin': '0 2px 0 auto'})
 	}
 }
-
-
