@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="style.css" >
     <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/lzil/fruity.js@7a7b531bf530e667b4957f156e6e347c84021cfa/fruity.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/lzil/fruity.js@7a7b531bf530e667b4957f156e6e347c84021cfa/fruity.js"></script>
     <title>liang zhou</title>
 </head>
 
@@ -20,6 +20,7 @@ hi there here's some source code
 <body>
 
 <div id='menu'>
+<div id='menu-box'>
     <div class='liang'>
         <span id='liang'>liang zhou</span>
         <svg class='underName'>
@@ -27,143 +28,109 @@ hi there here's some source code
         </svg>
     </div>
     <a class='title-label' href='#about'>about</a>
-    <a class='title-label' href='#work'>work</a>
-    <a class='title-label' href='#random'>random</a>
+    <a class='title-label' href='#blog'>blog</a>
+    <a class='title-label' href='#research'>research</a>
+    <a class='title-label' href='#misc'>misc</a>
+</div>
 </div>
 
-<!-- about me page -->
 <div id='content'>
-    <br>
+<div id='content-wrapper'>
+
+    <!-- about page -->
+    <div class='page' id='about'>
+        <hr class='divider'>
+        <div class='about'>
+            <p class='font-large'>
+                hello! my name is liang.
+            </p>
+            <p>
+                i'm a master's student studying theoretical neuroscience at ucl's
+                <a class='body-link' href='http://www.gatsby.ucl.ac.uk'>gatsby unit</a>.
+                i did my undergrad at mit, studying
+                <a class='body-link' href='https://bcs.mit.edu/'>bcs</a>
+                and
+                <a class='body-link' href='https://www.eecs.mit.edu/'>eecs</a>
+                and working in the
+                <a class="body-link" href="http://cocosci.mit.edu">cocosci</a>
+                lab. non-academically, i've been part of
+                <a class="body-link" href="http://eecscon.mit.edu">eecscon</a>,
+                <a class="body-link" href='https://www.facebook.com/MITMovementality/'>movementality</a>,
+                <a class="body-link" href="http://dancetroupe.mit.edu">dancetroupe</a>,
+                <a class="body-link" href="http://adt.mit.edu">adt</a>,
+                <a class="body-link" href="http://dynamit.mit.edu">dynamit</a>,
+                <a class="body-link" href="http://web.mit.edu/savetfp/SaveTFP/Home.html">savetfp</a> and
+                <a class="body-link" href="http://www.makemit.org">makemit</a>.
+            </p>
+            <p>
+                i'm from sunny socal, i can fold origami dragons, and i enjoy running and hip-hop dancing in my free time.
+            </p>
+        </div>
+    </div>
+
+    <!-- blog -->
+    <div class='page' id='blog'>
     <hr class='divider'>
-<div class='page' id='about'>
-    <div class='content about'>
-        <div id='prof-pic'>
-            <img src='images/pic.jpg'>
+        <div class='blog'>
+            to come!
         </div>
-        <p class='font-large'>
-            hi! i'm liang. 
-        </p>
-        <p>
-            i study theoretical neuroscience at ucl's <a class='body-link' href='http://www.gatsby.ucl.ac.uk'>gatsby unit</a>. i'm fascinated by how people think and how that affects our actions, emotions, and way of life. during my undergrad at mit i worked in josh tenenbaum's <a class="body-link" href="http://cocosci.mit.edu">cocosci</a> lab and was part of <a class="body-link" href="http://eecscon.mit.edu">eecscon</a>, <a class="body-link" href='https://www.facebook.com/MITMovementality/'>movementality</a>, <a class="body-link" href="http://dancetroupe.mit.edu">dancetroupe</a>, <a class="body-link" href="http://adt.mit.edu">adt</a>, <a class="body-link" href="http://dynamit.mit.edu">dynamit</a>, <a class="body-link" href="http://web.mit.edu/savetfp/SaveTFP/Home.html">savetfp</a> and <a class="body-link" href="http://www.makemit.org">makemit</a>.
-        </p>
-        <p>
-            i'm from sunny socal, i can fold origami dragons, and i enjoy running and hip-hop dancing in my free time.
-        </p>
     </div>
-</div>
 
-<!-- projects page -->
-<div class='page' id='work'>
-    <div class='content work'>
-        <ul class='projectIcons'>
-            <li class='project' name='zhijiao'>
-                <div class='projectLetter'>z</div>
-            </li>
-            <li class='project' name='towers'>
-                <div class='projectLetter'>t</div>
-            </li>
-            <li class='project' name='micropillar'>
-                <div class='projectLetter'>m</div>
-            </li>
-            <li class='project' name='harmony'>
-                <div class='projectLetter'>h</div>
-            </li>
-            <li class='project' name='swerve'>
-                <div class='projectLetter'>s</div>
-            </li>
-            <li class='project' name='adt'>
-                <div class='projectLetter'>a</div>
-            </li>
-            <li class='project' name='reedr'>
-                <div class='projectLetter'>r</div>
-            </li>
-            <li class='project' name='textura'>
-                <div class='projectLetter'>t</div>
-            </li>
-            <li class='project' name='impression'>
-                <div class='projectLetter'>i</div>  
-            </li>
-        </ul>
-        <br>
-        <div id="projectPlace" class='projectText'>    
-        </div>
-        <div id='zhijiao' class='projectText'>
-            <img class='project-logo' src='images/zhijiao.png'><b class="project-title">支教 (zhijiao) 2.0</b>
-            <p>volunteered with a chinese nonprofit based in shanghai that aims to provide education to children in rural villages through sustained long-distance teaching. evaluated and fixed computers at a couple participating schools in gansu province and helped write syllabi for the science curriculum.</p>
-            <p><i>summer 2018</i></p>
-        </div>
-        <div id="towers" class="projectText">
-            <img class='project-logo' src='images/towers.png'><b class="project-title">tower counterfactuals</b>
-            <p><a class="body-link" href="towers/towers.pdf">our paper</a> <a class="body-link" href="towers/physics_interface.html">trial visualizations</a></p>
-            <p>submitted and accepted as a talk at cogsci. the goal is to model people's counterfactual judgments of stability by generating noisy simulations of brick towers and designating a particular "special" brick to remove. we ran several amazon mturk experiments to sample human judgment and created a noisy simulation model that better represented people's intuitive judgments.</p>
-            <p><i>2016 + 2017 with tobi g</i></p>
-        </div>
-        <div id="streaming" class="projectText">
-            <img class='project-logo' src='images/streaming.png'><b class="project-title">streaming normalization</b>
-            <p>source code on github</p>
-            <p>we experimented with a new normalization method in recurrent neural nets called streaming normalization, which is a generalization of familiar methods like batch and layer normalization, as well as with decoupled/delayed accumulation and update of gradients. these methods have already been published, but we have been testing further (to be revealed) extensions.</p>
-            <p><i>2016 with qianli l</i></p>
-        </div>
-        <div id="micropillar" class="projectText">
-            <img class='project-logo' src='images/hairs.png'><b class="project-title">3d micropillar modeling</b>
-            <p><a href='http://dl.acm.org/citation.cfm?id=2817812' class='body-link'>the conference paper</a></p>
-            <p>as part of a urop, i created a java processing suite to model the geometry of 3d-printed high-resolution micropillar structures. these structures have a collective ability to bend and represent a vector field in their direction of orientation. by inputting a prepared image, we can output a representation of the resultant hair structure based on image properties. it's now patented!</p>
-            <p><i>spring 2015 with jifei ou in mit media lab's tangible media group</i></p>
-        </div>
-        <div id="harmony" class="projectText">
-            <img class='project-logo' src='images/harmony.png'><b class="project-title">harmony</b>
-            <p><a class="body-link" href="https://icanphysics.herokuapp.com">link to site</a></p>
-            <p>a web app that provides a collaborative music score editor that can be accessed in realtime by fellow composers on separate clients. in a nutshell, google docs for music. ruby on rails backend with firebase api. the site won <span class='boldy'>first place</span> in the 2015 mit 6.470 web programming competition! i did the backend dev and also acted as team manager.</p>
-            <p><i>january 2015 with monde d, justin x</i></p>
-        </div>
-        <div id="swerve" class="projectText">
-            <img class='project-logo' src='images/swerve.png'><b class="project-title">swerve</b>
-            <p><a class="body-link" href="https://github.com/lzil/swerve/raw/master/swerve.apk">link to .apk</a></p>
-            <p>an android app that makes it easy for students to find friends to hang out with by encouraging passive communication. allows users to share locations, activities, and short statuses with friends and browse a customized newsfeed of friends' statuses. made for 6.s198: making mobile apps.</p>
-            <p><i>spring 2015 with kevin n, manting l, hassan k</i></p>
-        </div>
-        <div id="adt" class="projectText">
-            <img class='project-logo' src='images/adt.png'><b class="project-title">mit adt website</b>
-            <p><a class="body-link" href="http://adt.mit.edu">link to site</a></p>
-            <p>a static html website loaded with javascript and pretty pictures. over the 2015-2016 school year, i maintained the organization website for mit's asian dance team and decided to do a complete redesign of the site, modernizing the look and feel as well as updating/removing outdated information. site has since been updated; old site at /v2</p>
-        </div>
-        <div id="reedr" class="projectText">
-            <!--img class='project-logo' src='images/question.png'--><b class="project-title">reedr</b>
-            <p><a class='body-link' href='https://github.com/turbomaze/reedr'>source code on github</a></p>
-            <p>for yhack 2015, we created a vanilla javascript app that takes in an image of text (i.e. a page from a book) and performs word segmentation (not ocr) and orders those words for potential word division. original idea involved an application to speed reading. we won the prize for the <span class='boldy'>best hack under 4kb</span> from datto!</p>
-            <p><i>fall 2015 with vahid f, anthony l</i></p>
-        </div>
-        <div id="textura" class="projectText">
-            <!--img class='project-logo' src='images/question.png'--><b class="project-title">textura</b>
-            <p><a class='body-link' href='https://github.com/lzil/textura'>source code on github</a></p>
-            <p>image feature detection, for any feature you like. given an picture and an adjective, textura will tell you how well your adjective describes your picture on a scale of 0 to 1. it automatically scrapes the web for images that match the adjective, trains a convolutional neural net based on these images, and returns a value. the model can then be cached for future use!</p>
-            <p><i>fall 2016 with tony z, rachel w, grace y</i></p>
-        </div>
-        <div id="impression" class="projectText">
-            <!--img class='project-logo' src='images/question.png'--><b class="project-title">impression</b>
-            <p><a class="body-link" href="https://github.com/lzil/impression">source code on github</a></p>
-            <p>a project for hackmit 2015 - the app takes in an image and outputs a short playlist of songs recommended for you based on the uploaded image. impression makes use of several apis to extract descriptor words from the image, runs an nlp script to transform those descriptors to emotion, then calls some more apis to create and display the playlist.</p>
-            <p><i>fall 2015 with ajay s, monde d, courtney g</i></p>
-        </div>
-    </div>
-</div>
-
-<!-- <hr class='divider'>
- -->
-<!-- random things page -->
-<div class='page' id='random'>
-    <div class='content random'>
-        <p><a class='body-link' href="http://news.mit.edu/2018/student-profile-liang-zhou-0202">mit news marshall bio</a></p>
-        <p><a class='body-link' href='plzplaywithme/index.html'>plz play with me &lt;3</a></p>
-        <p><a class='body-link' href='https://www.aapt.org/physicsteam/2014/team.cfm?id=926'>physics team bio</a></p>
-        <p>type <span class='code'>fruit</span> to fruitify this site</p>
-        <p>old sites <a class='body-link' href='images/title.png'>v0</a> <a class='body-link' href='v1/index.html'>v1</a></p>
-        <br>
-        <p class='font-small'>
-            liangz [shift+2] gatsby.ucl.ac.uk<br>
-            last updated 22 oct 18
+    <!-- research -->
+    <div class='page' id='research'>
+    <hr class='divider'>
+        <p>
+        i'm fascinated by how people think.
+        as individuals, we act, feel, imagine, and live in a way that defines the essence of being human.
+        in particular, i'm interested in the neural underpinnings of higher-level cognitive activities, such as biased decision-making and social pressure.
         </p>
+
+        <p>
+            research i've been a part of:
+        </p>
+        
+        <div class='research'>
+            <ol class='research-main-listing'>
+            <li>tower counterfactuals <img class='project-logo' src='images/towers.png'></li>
+                <p>
+                    <a class="code" href="towers/towers.pdf">paper</a>
+                    <a class="code" href="towers/physics_interface.html">visualization</a>
+                    the goal is to model people's counterfactual judgments of stability by
+                    generating noisy simulations of brick towers and designating a particular "special" brick to remove. we ran several
+                    amazon mturk experiments to sample human judgment and created a noisy simulation model that better represented
+                    people's intuitive judgments.
+                </p>
+            <li>3d micropillar modelling <img class='project-logo' src='images/hairs.png'></li>
+                <p>
+                    <a href='http://dl.acm.org/citation.cfm?id=2817812' class='code'>writeup</a>
+                    i created a java processing suite to model the geometry of 3d-printed high-res micropillar structures,
+                    which have a collective ability to bend and represent a vector field in their direction of orientation.
+                    using a prepared image as input, we can output a representation of the resultant hair structure based on
+                    image gradient properties.
+                </p>
+            </ol>
+        </div>
     </div>
+    
+    <!-- misc things page -->
+    <div class='page' id='misc'>
+    <hr class='divider'>
+    <br>
+        <div class=' misc'>
+            <p><a class='body-link' href="http://news.mit.edu/2018/student-profile-liang-zhou-0202">mit news marshall bio</a></p>
+            <p><a class='body-link' href='plzplaywithme/index.html'>plz play with me &lt;3</a></p>
+            <p><a class='body-link' href='http://icanphysics.herokuapp.com'>harmony</a></p>
+            <p><a class='body-link' href='https://www.aapt.org/physicsteam/2014/team.cfm?id=926'>physics team bio</a></p>
+            <p>type <span class='code'>fruit</span> to fruitify this site</p>
+            <p>old sites <a class='body-link' href='images/title.png'>v0</a> <a class='body-link' href='v1/index.html'>v1</a></p>
+            <br>
+            <p class='font-small'>
+                liangz [shift+2] gatsby.ucl.ac.uk<br>
+                last updated 11 mar 19
+            </p>
+        </div>
+    </div>
+
 </div>
 </div>
 

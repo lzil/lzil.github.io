@@ -3,7 +3,7 @@ var COLOR_TEXT = '#444'
 var COLOR_LABEL = '#aaa'
 
 $(document).ready(function() {
-	resizeWin();
+	//resizeWin();
 
 	/*
 	project icon hovering effects
@@ -76,20 +76,20 @@ $(document).ready(function() {
 })
 
 
-$(window).resize(function() {
-	resizeWin();
-})
+// $(window).resize(function() {
+// 	resizeWin();
+// })
 
 
-var resizeWin = function() {
-	var bw = $('body').innerWidth();
-	if (bw < 880) {
-		$('#menu').css({'text-align': 'center', 'width': '100%'})
-		$('#content').css({'width': '100%', 'padding': 0})
-		$('.underName').css({'margin': 'auto'})
-	} else {
-		$('#menu').css({'text-align': 'right', 'width': '30%'})
-		$('#content').css({'width': '60%', 'padding-left': '5%'})
-		$('.underName').css({'margin': '0 2px 0 auto'})
-	}
-}
+// var resizeWin = function() {
+// 	var bw = $('body').innerWidth();
+// 	if (bw < 880) {
+// 		$('#menu').css({'text-align': 'center', 'width': '100%'})
+// 		$('#content').css({'width': '100%', 'padding': 0})
+// 		$('.underName').css({'margin': 'auto'})
+// 	} else {
+// 		$('#menu').css({'text-align': 'right', 'width': '20%'})
+// 		$('#content').css({'width': '60%', 'padding-left': '5%'})
+// 		$('.underName').css({'margin': '0 2px 0 auto'})
+// 	}
+// }
