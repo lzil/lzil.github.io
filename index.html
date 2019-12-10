@@ -13,7 +13,6 @@
 <!--
 
 hi there here's some source code
-(note to self to put easter eggs here in the future when I think of them)
 
 -->
 
@@ -22,111 +21,108 @@ hi there here's some source code
 <div id='menu'>
 <div id='menu-box'>
     <div class='liang'>
-        <span id='liang'>liang zhou</span>
+        <a id='liang' href='#about'>liang zhou</a>
         <svg class='underName'>
             <line class='namePath' x1="0" y1="0" x2="180" y2="0" />
         </svg>
     </div>
-    <a class='title-label' href='#about'>about</a>
-    <a class='title-label' href='#blog'>blog</a>
-    <a class='title-label' href='#research'>research</a>
+    <a class='title-label' href='#research'>research</a> .
+<!--     <a class='title-label' href='#blog'>blog</a> .
+ -->    <a class='title-label' href='#photos'>photos</a> .
     <a class='title-label' href='#misc'>misc</a>
 </div>
 </div>
+
+<hr class='divider'>
 
 <div id='content'>
 <div id='content-wrapper'>
 
     <!-- about page -->
     <div class='page' id='about'>
-        <hr class='divider'>
         <div class='about'>
             <p class='font-large'>
-                hello! my name is liang.
+                hello!
             </p>
             <p>
-                i'm a master's student studying theoretical neuroscience at ucl's
-                <a class='body-link' href='http://www.gatsby.ucl.ac.uk'>gatsby unit</a>.
-                i did my undergrad at mit, studying
-                <a class='body-link' href='https://bcs.mit.edu/'>bcs</a>
-                and
-                <a class='body-link' href='https://www.eecs.mit.edu/'>eecs</a>
-                and working in the
-                <a class="body-link" href="http://cocosci.mit.edu">cocosci</a>
-                lab. non-academically, i've been part of
-                <a class="body-link" href="http://eecscon.mit.edu">eecscon</a>,
-                <a class="body-link" href='https://www.facebook.com/MITMovementality/'>movementality</a>,
-                <a class="body-link" href="http://dancetroupe.mit.edu">dancetroupe</a>,
-                <a class="body-link" href="http://adt.mit.edu">adt</a>,
-                <a class="body-link" href="http://dynamit.mit.edu">dynamit</a>,
-                <a class="body-link" href="http://web.mit.edu/savetfp/SaveTFP/Home.html">savetfp</a> and
-                <a class="body-link" href="http://www.makemit.org">makemit</a>.
+                i study theoretical neuroscience at ucl's
+                <a class='body-link' href='http://www.gatsby.ucl.ac.uk'>gatsby unit</a>,
+                working with
+                <a class='body-link' href='http://www.gatsby.ucl.ac.uk/~pel/'>peter latham</a>.
+                i'm a current
+                <a class='body-link' href='https://www.marshallscholarship.org/'>marshall scholar</a>.
             </p>
             <p>
-                i'm from sunny socal, i can fold origami dragons, and i enjoy running and hip-hop dancing in my free time.
+                i'm from sunny socal, i can fold origami dragons, and i enjoy running and hip-hop dance.
             </p>
         </div>
     </div>
 
     <!-- blog -->
     <div class='page' id='blog'>
-    <hr class='divider'>
         <div class='blog'>
-            to come!
+            will update this
         </div>
     </div>
 
+    
+
     <!-- research -->
     <div class='page' id='research'>
-    <hr class='divider'>
         <p>
-        i'm fascinated by how people think.
-        as individuals, we act, feel, imagine, and live in a way that defines the essence of being human.
-        in particular, i'm interested in the neural underpinnings of higher-level cognitive activities, such as biased decision-making and social pressure.
+            i'm fascinated by how people think, feel, act, and live.
+            broadly, i'm interested in the neural underpinnings of higher-level cognition, such as structure learning and decision-making.
         </p>
 
         <p>
-            research i've been a part of:
+            here's a sampling:
         </p>
         
         <div class='research'>
             <ol class='research-main-listing'>
-            <li>tower counterfactuals <img class='project-logo' src='images/towers.png'></li>
+
+                <li>tower hypotheticals <img class='project-logo' src='images/towers.png'></li>
                 <p>
-                    <a class="code" href="towers/towers.pdf">paper</a>
-                    <a class="code" href="towers/physics_interface.html">visualization</a>
-                    the goal is to model people's counterfactual judgments of stability by
-                    generating noisy simulations of brick towers and designating a particular "special" brick to remove. we ran several
-                    amazon mturk experiments to sample human judgment and created a noisy simulation model that better represented
-                    people's intuitive judgments.
+                    <a class="body-link" href="towers/towers.pdf">paper</a>
+                    <a class="body-link" href="towers/physics_interface.html">visualization</a>
+                    the goal is to model people's judgments of physical stability using
+                    a noisy physics engine that can simulate possible counterfactuals.
+                    we ran several mturk experiments and confirmed that our approach better
+                    modeled intuitive human judgments.
                 </p>
-            <li>3d micropillar modelling <img class='project-logo' src='images/hairs.png'></li>
+
+                <li>3d micropillars <img class='project-logo' src='images/hairs.png'></li>
                 <p>
-                    <a href='http://dl.acm.org/citation.cfm?id=2817812' class='code'>writeup</a>
-                    i created a java processing suite to model the geometry of 3d-printed high-res micropillar structures,
-                    which have a collective ability to bend and represent a vector field in their direction of orientation.
-                    using a prepared image as input, we can output a representation of the resultant hair structure based on
-                    image gradient properties.
+                    <a href='http://dl.acm.org/citation.cfm?id=2817812' class='body-link'>paper</a>
+                    i wrote a java processing suite to model the geometry of 3d-printed high-res micropillar structures,
+                    which can collectively bend to represent a vector field. using a prepared image as input, we output a
+                    representation of the resulting structure based on image gradient properties.
                 </p>
             </ol>
+        </div>
+    </div>
+
+    <!-- photos -->
+    <div class='page' id='photos'>
+        <div class='photos'>
+            <p>
+                will compile and update by the end of the year hopefully
+            </p>
         </div>
     </div>
     
     <!-- misc things page -->
     <div class='page' id='misc'>
-    <hr class='divider'>
-    <br>
-        <div class=' misc'>
+        <div class='misc'>
             <p><a class='body-link' href="http://news.mit.edu/2018/student-profile-liang-zhou-0202">mit news marshall bio</a></p>
             <p><a class='body-link' href='plzplaywithme/index.html'>plz play with me &lt;3</a></p>
             <p><a class='body-link' href='http://icanphysics.herokuapp.com'>harmony</a></p>
             <p><a class='body-link' href='https://www.aapt.org/physicsteam/2014/team.cfm?id=926'>physics team bio</a></p>
             <p>type <span class='code'>fruit</span> to fruitify this site</p>
-            <p>old sites <a class='body-link' href='images/title.png'>v0</a> <a class='body-link' href='v1/index.html'>v1</a></p>
             <br>
             <p class='font-small'>
                 liangz [shift+2] gatsby.ucl.ac.uk<br>
-                last updated 11 mar 19
+                last updated 10 dec 19
             </p>
         </div>
     </div>
