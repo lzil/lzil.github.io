@@ -4,52 +4,83 @@ var COLOR_LABEL = '#999'
 
 $(document).ready(function() {
 
-	var containers = {};
-	var photos = {};
-	var overlays = {};
 
-	var DEFAULT_HEIGHT = 140;
+	/*
+	photo organization
+	*/
+
+	var containers = {};
+	// var photos = {};
+	// var overlays = {};
+
+	var DEFAULT_HEIGHT = 120;
 	var SIDE_PADDING = 20;
 
+	var photos = {}
+
+	// initial photos loading
 	var load_photos = function(type) {
 		containers[type] = []
-		photos[type] = []
-		overlays[type] = []
+		// photos[type] = []
+		// overlays[type] = []
 
-		for (var i = 0; i < PHOTOS[type].length; i++) {
+		photos[type] = shuffle(PHOTOS[type])
+
+		for (var i = 0; i < photos[type].length; i++) {
 
 			// initialize all the elements and attach them in the right places
-			var container = document.createElement("div");
+			var container = document.createElement("a");
 			var photo = document.createElement("img");
-			var overlay = document.createElement("div");
-			$(container).addClass('photo-container')
-			$(overlay).addClass('photo-overlay')
-			$(photo).addClass('photo')
 
-			photo.src = 'images/photos/' + PHOTOS[type][i];
+			var src = 'images/photos/' + photos[type][i];
+			
+			$(container).addClass('photo-container')
+			$(container).attr('href', src)
+			$(photo).addClass('photo')
+			
+			photo.src = src;
 			container.appendChild(photo)
 			containers[type].push(container)
-			photos[type].push(photo)
-			overlays[type].push(overlay)
-		}
+			
+			// var overlay = document.createElement("div");
+			// $(overlay).addClass('photo-overlay')
+			// container.appendChild(overlay)
+			// overlays[type].push(overlay)
 
-		put_photos(type)
+			// photos[type].push(photo)
+		}
+		resize_photos(type)
+
 	}
 
+	// for resizing layout when screen dimensions change or refresh
+	var resize_photos = function(type) {
 
-	var put_photos = function(type) {
+		// helper function to resize once a line is finished
+		var resize_line = function(imgs, v_width, l_width) {
+			l_idx = imgs.length
 
-		// reset all the containers and get rid of linebreaks
+			// the magic ratio to multiply by
+			var ratio = (v_width - l_idx * SIDE_PADDING) / (l_width - l_idx * SIDE_PADDING)
+
+			// now make everything that's already in the line fit the line
+			// console.log("resizing", imgs)
+			imgs.each(function(img) {
+				var img_photo = imgs[img].children[0]
+				$(img_photo).css({
+					'height': DEFAULT_HEIGHT * ratio,
+				})
+			})
+		}
+
+		// reset all the containers
 		containers[type].forEach(function(ctr) {
 			ctr.classList = ['photo-container']
 		})
-		brs = document.getElementsByClassName('photo-br');
-		while (brs[0]) {
-			brs[0].parentNode.removeChild(brs[0])
-		}
+		var photo_tab = $('.photo-tab.' + type)[0]
 
 		// total width we can play with
-		var v_width = $('#content')[0].clientWidth;
+		var v_width = $('#content')[0].offsetWidth - 10;
 		// variable to store current line width
 		var l_width = 0;
 		// line number that we're on
@@ -58,16 +89,14 @@ $(document).ready(function() {
 		// class name for the line and type
 		var line_type = 'line-' + type + '-'
 
-		for (var i = 0; i < PHOTOS[type].length; i++) {
-
-			// initialize all the elements and attach them in the right places
+		for (var i = 0; i < photos[type].length; i++) {
+			// initialize container
 			var container = containers[type][i];
-			var photo = photos[type][i];
-			var overlay = overlays[type][i];
+			// var photo = photos[type][i];
+			// var overlay = overlays[type][i];
 			$(container).addClass(line_type + l_num)
-
-			var photo_tab = $('.photo-tab.' + type)[0]
 			photo_tab.appendChild(container)
+			photo = $(container)[0].children[0]
 			/// container.appendChild(photo)
 			
 			var aspect_ratio = photo.width / photo.height
@@ -82,13 +111,8 @@ $(document).ready(function() {
 				var line_imgs = $('.' + line_type + l_num)
 				resize_line(line_imgs, v_width, l_width)
 
-				// start a new line and reset
+				// start a new line and add the thing that's too big
 				l_num++;
-				var new_br = document.createElement('br')
-				$(new_br).addClass('photo-br')
-				photo_tab.appendChild(new_br)
-
-				// add the thing that's too big
 				photo_tab.appendChild(container)
 				$(container).addClass(line_type + l_num)
 				l_width = i_width + SIDE_PADDING;
@@ -98,33 +122,15 @@ $(document).ready(function() {
 				l_width = n_width;
 			}
 
-			if (i == PHOTOS[type].length - 1) {
+			if (i == photos[type].length - 1) {
 				// last photo, show everything
 				var line_imgs = $('.' + line_type + l_num)
 				resize_line(line_imgs, v_width, l_width)
-			} 
-			
+			} 	
 		}
 	}
 
-	var resize_line = function(imgs, v_width, l_width) {
-		l_idx = imgs.length
-
-		// the magic ratio to multiply by
-		var ratio = (v_width - l_idx * SIDE_PADDING) / (l_width - l_idx * SIDE_PADDING) - 0.01
-
-		// now make everything that's already in the line fit the line
-		console.log("resizing", imgs)
-		imgs.each(function(img) {
-			var img_photo = imgs[img].children[0]
-
-			$(img_photo).css({
-				'height': DEFAULT_HEIGHT * ratio,
-			})
-		})
-	}
-
-	// adding all the pictures
+	// actually adding all the photos
 	load_photos("landscape")
 	load_photos("city")
 	load_photos("misc")
@@ -135,7 +141,7 @@ $(document).ready(function() {
 	*/
 
 	// setting initial 'about'. cur_target is the current page that is on
-	cur_target = document.getElementById('photos');
+	cur_target = document.getElementById('about');
 	cur_target.style.display = 'block';
 	// not 100% sure what this does; probably copied it from somewhere
 	$('a[href*=#]:not([href=#])').click(function() {
@@ -147,7 +153,7 @@ $(document).ready(function() {
 				$(cur_target).fadeOut(200, function() {
 					$(target).fadeIn(200)
 				})
-				$('.title-label').css('color', COLOR_LABEL)
+				$('.title-label').css('color', '')
 				$(this).css('color', COLOR_TEXT)
 				cur_target = target;
 			}
@@ -167,13 +173,12 @@ $(document).ready(function() {
 
 
 	$(window).on('resize', function() {
-		put_photos('landscape')
-		put_photos('city')	
-		put_photos('misc')		
+		resize_photos('landscape')
+		resize_photos('city')	
+		resize_photos('misc')		
 	})
 
 })
-
 
 
 
@@ -218,34 +223,37 @@ var PHOTOS = {
 		"uk-6.jpg",
 		"uk-7.jpg",
 		"uk-8.jpg",
+		"uk-12.jpg",
+		"uk-11.jpg"
 
 	],
 
 	"misc": [
-		"austria-1.jpg",
 		"china-2.jpg",
-		
 		"china-4.jpg",
-		
-		
-		
 		"china-8.jpg",
-		
-		
 		"germany-2.jpg",
-		
-		
-		
 		"ireland-2.jpg",
-		
-		
 		"netherlands-1.jpg",
-		
-		
 		"uk-1.jpg",
-		
-		
 		"uk-4.jpg",
-
 	]
+}
+
+
+// adapted from https://stackoverflow.com/questions/6274339/how-can-i-shuffle-an-array
+/**
+ * Shuffles array in place.
+ * @param {Array} a items An array containing the items.
+ */
+function shuffle(a) {
+	var b = a.slice()
+    var j, x, i;
+    for (i = b.length - 1; i > 0; i--) {
+        j = Math.floor(Math.random() * (i + 1));
+        x = b[i];
+        b[i] = b[j];
+        b[j] = x;
+    }
+    return b;
 }

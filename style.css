@@ -70,13 +70,25 @@ body {
 }
 
 .title-label {
-
 	margin:auto;
 	padding-top:6px;
 	padding-left:2px;
-	letter-spacing: 1px;
+	letter-spacing: .5px;
 	text-decoration: none;
 	color:#999;
+	transition: .1s ease-in-out;
+}
+
+.title-label:hover .title-label-decoration {
+	opacity:1;
+}
+
+.title-label-decoration {
+	opacity:0;
+}
+
+.title-label:hover {
+	color: var(--color-dark);
 }
 
 .font-large {
@@ -88,9 +100,10 @@ body {
 }
 
 .divider {
-	display:none;
 	width:10vw;
-	border:1px var(--color-darker) solid;
+	min-width:100px;
+	border:1px var(--color-dark) solid;
+	margin-left:0;
 }
 
 a.body-link {
@@ -149,19 +162,24 @@ a:focus {
 	text-decoration: none;
 }
 
+#photos hr, #photos p {
+	margin: 14px 6px;
+}
+
 .photo-container {
 	display: inline-block;
 	position: relative;
-	padding: 7px 10px;
+	margin: 3px 6px;
+	cursor:initial;
 }
 
 .photo-overlay {
 	position: absolute;
-	bottom: 13.5px;
-	margin: 0px;
+	bottom: 10.5px;
+	margin: 0 4px;
 	background-color:var(--color-darker);
 	opacity: 0.8;
-	width: calc(100% - 20px);
+	width: calc(100% - 8px);
 	height: 0;
 }
 
@@ -169,11 +187,19 @@ a:focus {
 	height: 20%;
 }
 
+.photo-container:hover .photo {
+	opacity:1;
+	transition: .1s ease-in-out;
+}
+
 .photo {
-	height: 140px;
-	border-radius:5px;
+	height: 120px;
+	border-radius:1px;
 	width:auto;
-	max-height: 300px;
+	max-height: 200px;
+	opacity: .8;
+	border: 2px solid var(--color-nav);
+	padding: 2px;
 }
 
 .boldy {
