@@ -10,8 +10,6 @@ $(document).ready(function() {
 	*/
 
 	var containers = {};
-	// var photos = {};
-	// var overlays = {};
 
 	var DEFAULT_HEIGHT = 120;
 	var SIDE_PADDING = 20;
@@ -21,10 +19,10 @@ $(document).ready(function() {
 	// initial photos loading
 	var load_photos = function(type) {
 		containers[type] = []
-		// photos[type] = []
-		// overlays[type] = []
 
 		photos[type] = shuffle(PHOTOS[type])
+
+		var n_loaded = 0
 
 		for (var i = 0; i < photos[type].length; i++) {
 
@@ -41,16 +39,14 @@ $(document).ready(function() {
 			photo.src = src;
 			container.appendChild(photo)
 			containers[type].push(container)
-			
-			// var overlay = document.createElement("div");
-			// $(overlay).addClass('photo-overlay')
-			// container.appendChild(overlay)
-			// overlays[type].push(overlay)
 
-			// photos[type].push(photo)
+			var photo_tab = $('.photo-tab.' + type)[0]
+			photo_tab.appendChild(photo)
+			photo.onclick = function() {
+				window.location.href = this.src
+			}
+
 		}
-		resize_photos(type)
-
 	}
 
 	// for resizing layout when screen dimensions change or refresh
@@ -64,23 +60,31 @@ $(document).ready(function() {
 			var ratio = (v_width - l_idx * SIDE_PADDING) / (l_width - l_idx * SIDE_PADDING)
 
 			// now make everything that's already in the line fit the line
-			// console.log("resizing", imgs)
+			var hh = []
 			imgs.each(function(img) {
 				var img_photo = imgs[img].children[0]
 				$(img_photo).css({
 					'height': DEFAULT_HEIGHT * ratio,
 				})
+				// $(img_photo).css({
+				// 	'width': img_photo.width / img_photo.height * DEFAULT_HEIGHT * ratio
+				// })
+				hh.push(img_photo.width)
 			})
+
+			console.log(imgs, v_width, l_width, hh, (l_width - l_idx * SIDE_PADDING) * ratio + l_idx * SIDE_PADDING)
 		}
 
-		// reset all the containers
+		// get rid of the breaks, reset the container line classes
+		$('.'+type+' .photo-br').remove()
 		containers[type].forEach(function(ctr) {
-			ctr.classList = ['photo-container']
+			$(ctr).attr('class', 'photo-container')
 		})
+
 		var photo_tab = $('.photo-tab.' + type)[0]
 
 		// total width we can play with
-		var v_width = $('#content')[0].offsetWidth - 10;
+		var v_width = $('#content')[0].offsetWidth - 0.05;
 		// variable to store current line width
 		var l_width = 0;
 		// line number that we're on
@@ -92,12 +96,9 @@ $(document).ready(function() {
 		for (var i = 0; i < photos[type].length; i++) {
 			// initialize container
 			var container = containers[type][i];
-			// var photo = photos[type][i];
-			// var overlay = overlays[type][i];
 			$(container).addClass(line_type + l_num)
 			photo_tab.appendChild(container)
 			photo = $(container)[0].children[0]
-			/// container.appendChild(photo)
 			
 			var aspect_ratio = photo.width / photo.height
 			// testing next width to see if it's too big
@@ -112,13 +113,17 @@ $(document).ready(function() {
 				resize_line(line_imgs, v_width, l_width)
 
 				// start a new line and add the thing that's too big
+				var br = document.createElement('br')
+				$(br).addClass('photo-br')
+				photo_tab.appendChild(br)
+
 				l_num++;
 				photo_tab.appendChild(container)
 				$(container).addClass(line_type + l_num)
 				l_width = i_width + SIDE_PADDING;
 				
 			} else {
-				// increment line width and move on
+				// increase line width and move on
 				l_width = n_width;
 			}
 
@@ -132,7 +137,7 @@ $(document).ready(function() {
 
 	// actually adding all the photos
 	load_photos("landscape")
-	load_photos("city")
+	load_photos("cities")
 	load_photos("misc")
 
 	
@@ -140,31 +145,26 @@ $(document).ready(function() {
 	pressing navbar button effects
 	*/
 
-	// setting initial 'about'. cur_target is the current page that is on
-	cur_target = document.getElementById('about');
-	cur_target.style.display = 'block';
-	// not 100% sure what this does; probably copied it from somewhere
-	$('a[href*=#]:not([href=#])').click(function() {
-		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-			var target = $(this.hash);
-			target = target.length ? target[0] : $('[name=' + this.hash.slice(1) +']');
-			if (target && target.id != cur_target.id) {
-				// fade the text
-				$(cur_target).fadeOut(200, function() {
-					$(target).fadeIn(200)
-				})
-				$('.title-label').css('color', '')
-				$(this).css('color', COLOR_TEXT)
-				cur_target = target;
-			}
-		}
-	});
+	// setting initial 'about'. cur_target is the current display
+	var cur_target = $('#about');
+	cur_target.css('display', 'block');
+	
+	$('.nav-link').click(function() {
+		$('.nav-link').css('color', '')
+		$(this).css('color', COLOR_TEXT)
+		var target = $('#'+this.id.slice(4))
+		$(cur_target).fadeOut(160, function() {
+			target.fadeIn(160)
+			cur_target = target;
+		})		
+	})
 
 
 	/*
 	name underline animation
 	*/
-	$('#liang').hover(function() {
+
+	$('#nav-about').hover(function() {
 		$('.underName').css({'width': '160px', 'stroke-width': '4px'});
 	}, function() {
 		$('.underName').css({'width': '0px', 'stroke-width': '0px'});
@@ -172,11 +172,11 @@ $(document).ready(function() {
 
 
 
-	$(window).on('resize', function() {
-		resize_photos('landscape')
-		resize_photos('city')	
-		resize_photos('misc')		
-	})
+	// $(window).on('resize', function() {
+	// 	resize_photos('landscape')
+	// 	resize_photos('cities')	
+	// 	resize_photos('misc')		
+	// })
 
 })
 
@@ -199,7 +199,7 @@ var PHOTOS = {
 		"uk-10.jpg"
 	],
 
-	"city": [
+	"cities": [
 		"belgium-1.jpg",
 		"china-3.jpg",
 		"china-5.jpg",

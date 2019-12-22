@@ -2,9 +2,11 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <head>
-    <link rel="stylesheet" href="fonts/font-awesome-4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="style.css" >
-    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script
+              src="https://code.jquery.com/jquery-3.4.1.min.js"
+              integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+              crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/lzil/fruity.js@7a7b531bf530e667b4957f156e6e347c84021cfa/fruity.js"></script>
     <title>liang zhou</title>
@@ -21,14 +23,14 @@ hi there here's some source code
 <div id='menu'>
 <div id='menu-box'>
     <div class='liang'>
-        <a id='liang' href='#about'>liang zhou</a>
+        <span class='nav-link' id='nav-about'>liang zhou</span>
         <svg class='underName'>
             <line class='namePath' x1="0" y1="0" x2="180" y2="0" />
         </svg>
     </div>
-    <a class='title-label' href='#research'>research</a>&nbsp;&nbsp;/&nbsp;
-    <a class='title-label' href='#photos'>photos</a>&nbsp;&nbsp;/&nbsp;
-    <a class='title-label' href='#misc'>misc</a>
+    <span class='title-label nav-link' id='nav-research'>research</span>&nbsp;&nbsp;/&nbsp;
+    <span class='title-label nav-link' id='nav-photos'>photos</span>&nbsp;&nbsp;/&nbsp;
+    <span class='title-label nav-link' id='nav-misc'>misc</span>
 </div>
 </div>
 
@@ -118,12 +120,12 @@ hi there here's some source code
         <hr class='divider'>
         <div class='photos'>
             <div class='photo-tab landscape'>
-                <p>
-                    [nature]
-                </p>
+                <!-- <p>
+                    [landscapes]
+                </p> -->
             </div>
             <hr class='divider'>
-            <div class='photo-tab city'>
+            <div class='photo-tab cities'>
                 <p>
                     [cities]
                 </p>
