@@ -22,7 +22,7 @@ body {
 
 #menu {
 	padding-top:10vh;
-	padding-bottom:5vh;
+	padding-bottom:3vh;
 	display:block;
 	text-align:left;
 	
@@ -38,6 +38,7 @@ body {
 	display: block;
 	line-height: 25px;
 	font-size:16px;
+	margin: auto 2px;
 }
 
 .page {
@@ -126,10 +127,6 @@ a:focus {
     outline:0;
 }
 
-#research {
-	text-align: left;
-}
-
 .research-main-listing {
 	line-height: 20px;
 }
@@ -170,10 +167,6 @@ a:focus {
 	margin-top: 30px;
 }
 
-.photos {
-	margin: 6px;
-}
-
 .photo-tab {
 	display:flex;
 	flex-flow: row wrap;
@@ -186,7 +179,7 @@ a:focus {
 	padding: 5px;
 	margin:0 -1px -1px 0px;
 	border: 1px solid var(--color-nav);
-	opacity: .8;
+	opacity: .75;
 	object-fit: cover;
 	flex: 1 1 0px;
 	transition: .1s ease-in-out;
@@ -203,10 +196,4 @@ a:focus {
 
 .photo:hover {
 	opacity:0.9;
-}
-
-.boldy {
-	color:var(--color-light);
-	background-color:black;
-	padding:2px 2px 1px;
 }
