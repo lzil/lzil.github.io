@@ -60,7 +60,7 @@ $(document).ready(function() {
 	}
 
 	// actually adding the photos
-	load_photos("landscape")
+	load_photos("landscapes")
 	load_photos("cities")
 	load_photos("misc")
 

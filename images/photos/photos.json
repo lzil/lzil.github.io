@@ -1,6 +1,6 @@
 PHOTOS = {
     
-    "landscape": [
+    "landscapes": [
         "china-1.jpg",
         "china-6.jpg",
         "china-7.jpg",
@@ -11,7 +11,8 @@ PHOTOS = {
         "sweden-3.jpg",
         "sweden-4.jpg",
         "sweden-5.jpg",
-        "uk-10.jpg"
+        "uk-10.jpg",
+        "albania-2.jpg",
     ],
 
     "cities": [
@@ -38,8 +39,12 @@ PHOTOS = {
         "uk-7.jpg",
         "uk-8.jpg",
         "uk-12.jpg",
-        "uk-11.jpg"
-
+        "uk-11.jpg",
+        "albania-1.jpg",
+        "croatia-2.jpg",
+        "croatia-3.jpg",
+        "bosnia-1.jpg",
+        "serbia-1.jpg"
     ],
 
     "misc": [
@@ -51,5 +56,6 @@ PHOTOS = {
         "netherlands-1.jpg",
         "uk-1.jpg",
         "uk-4.jpg",
+        "croatia-1.jpg"
     ]
 }
