@@ -2,49 +2,35 @@ PHOTOS = {
     
     "landscapes": [
         "china-1.jpg",
-        "china-6.jpg",
         "china-7.jpg",
         "ireland-1.jpg",
         "netherlands-2.jpg",
         "slovakia-2.jpg",
         "sweden-2.jpg",
         "sweden-3.jpg",
-        "sweden-4.jpg",
         "sweden-5.jpg",
         "uk-10.jpg",
         "albania-2.jpg",
     ],
 
     "cities": [
-        "belgium-1.jpg",
         "china-3.jpg",
         "china-5.jpg",
-        "denmark-1.jpg",
         "germany-1.jpg",
         "germany-3.jpg",
         "germany-4.jpg",
         "lithuania-1.jpg",
         "lithuania-2.jpg",
-        "slovakia-1.jpg",
-        "slovakia-3.jpg",
         "spain-1.jpg",
-        "spain-2.jpg",
         "spain-4.jpg",
-        "spain-5.jpg",
         "spain-6.jpg",
-        "uk-2.jpg",
-        "uk-3.jpg",
-        "uk-5.jpg",
-        "uk-6.jpg",
-        "uk-7.jpg",
         "uk-8.jpg",
         "uk-12.jpg",
         "uk-11.jpg",
         "albania-1.jpg",
         "croatia-2.jpg",
         "croatia-3.jpg",
-        "bosnia-1.jpg",
-        "serbia-1.jpg"
+        "bosnia-1.jpg"
     ],
 
     "misc": [
@@ -55,6 +41,7 @@ PHOTOS = {
         "ireland-2.jpg",
         "netherlands-1.jpg",
         "uk-1.jpg",
+        "uk-2.jpg",
         "uk-4.jpg",
         "croatia-1.jpg"
     ]
