@@ -4,23 +4,6 @@ var COLOR_NAV = '#999'
 
 document.addEventListener('DOMContentLoaded', function(){ 
 
-    /*
-    body fades in
-    */
-
-    var op = 0
-    var body_int = 0.05
-    var body_time = 7
-    var timer_body = setInterval(function() {
-        if (op >= 1 - body_int) {
-            clearInterval(timer_body)
-            document.body.style.opacity = 1
-        }
-        op += body_int
-        document.body.style.opacity = op
-    }, body_time)
-
-
 	/*
 	pressing navbar button effects
 	*/

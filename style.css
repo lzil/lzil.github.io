@@ -14,7 +14,7 @@ body {
 	padding: 0 20px 0;
 	background-color:var(--color-light);
 	color:var(--color-dark);
-	opacity:0;
+	opacity:1;
 }
 
 .no-kerning {
@@ -136,7 +136,7 @@ a:focus {
 
 .research-main-listing {
 	line-height: 20px;
-	list-style-type: '.  ';
+	list-style-type: '~   ';
 	list-style-position: outside;
 }
 
