@@ -30,7 +30,9 @@ PHOTOS = {
         "albania-1.jpg",
         "croatia-2.jpg",
         "croatia-3.jpg",
-        "bosnia-1.jpg"
+        "bosnia-1.jpg",
+        "italy-1.jpg",
+        "italy-3.jpg"
     ],
 
     "misc": [
@@ -43,6 +45,9 @@ PHOTOS = {
         "uk-1.jpg",
         "uk-2.jpg",
         "uk-4.jpg",
-        "croatia-1.jpg"
+        "croatia-1.jpg",
+        "italy-2.jpg"
     ]
 }
+
+// convert -resize 50% source.png dest.jpg

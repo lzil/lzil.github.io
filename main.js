@@ -56,6 +56,22 @@ document.addEventListener('DOMContentLoaded', function(){
 	   })
     })
 
+    document.querySelectorAll('.research-down-arrow').forEach(function(l) {
+        l.addEventListener('click', function() {
+            var desc = this.nextElementSibling;;
+            if (desc.style.height.slice(0,-2) > 0) {
+                desc.style.height = `0px`
+                desc.style.opacity = 0
+            } else {
+                setTimeout(function() {
+                    desc.style.opacity = 1
+                }, 300)
+                
+                desc.style.height = `${desc.scrollHeight}px`
+            }
+        })
+    })
+
 	/*
 	photo organization
 	*/ 
@@ -74,8 +90,9 @@ document.addEventListener('DOMContentLoaded', function(){
 
 			// add the photo and add the link
 			photo_tab.appendChild(photo)
+            //photo.target = '_blank'
 			photo.onclick = function() {
-				window.location.href = this.src
+				window.open(this.src, '_blank')
 			}
 		}
 	}
