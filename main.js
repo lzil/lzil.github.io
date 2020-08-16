@@ -56,6 +56,10 @@ document.addEventListener('DOMContentLoaded', function(){
 	   })
     })
 
+    /*
+    showing/hiding project descriptions
+    */
+
     document.querySelectorAll('.research-down-arrow').forEach(function(l) {
         l.addEventListener('click', function() {
             var desc = this.nextElementSibling;;
@@ -66,7 +70,6 @@ document.addEventListener('DOMContentLoaded', function(){
                 setTimeout(function() {
                     desc.style.opacity = 1
                 }, 300)
-                
                 desc.style.height = `${desc.scrollHeight}px`
             }
         })
@@ -100,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function(){
 	// actually adding the photos
 	load_photos("landscapes")
 	load_photos("cities")
-	load_photos("misc")
+	load_photos("etc")
 
 }, false)
 

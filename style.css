@@ -18,6 +18,7 @@ body {
 	background-color:var(--color-light);
 	color:var(--color-dark);
 	opacity:1;
+	min-width:200px;
 	max-width: 800px;
 }
 
@@ -26,6 +27,7 @@ body {
 }
 
 #menu {
+	min-width:225px;
 	padding-top:10vh;
 	padding-bottom:3vh;
 	display:block;
@@ -41,7 +43,7 @@ body {
 
 #content {
 	display: block;
-	line-height: 25px;
+	line-height: 1.5;
 	font-size:16px;
 	margin: auto 2px;
 }
@@ -108,22 +110,31 @@ body {
 }
 
 .font-large {
-	font-size: 26px;
+	font-size: var(--font-large);
 }
 
 .font-small {
-	font-size: 14px;
+	font-size: var(--font-small);
+}
+
+.cmid {
+	color:var(--color-mid);
+}
+
+.cdark {
+	color:var(--color-dark);
 }
 
 .divider {
-	width:10vw;
-	min-width:100px;
+	width:150px;
 	border:1px var(--color-dark) solid;
 	margin-left:0;
+	margin-top: 20px;
+
 }
 
 a.body-link {
-	padding:1px 1px 1px;
+	padding:1.5px 1px;
 	border-radius: 1px;
 	text-decoration:underline;
 	color:var(--color-darker);
@@ -132,6 +143,7 @@ a.body-link {
 a.body-link:hover {
 	background-color:var(--color-darker);
 	color:white;
+	text-decoration:none;
 }
 
 a:focus {
@@ -140,21 +152,24 @@ a:focus {
 
 .research-main-listing {
 	line-height: 20px;
-	list-style-type: '~   ';
-	list-style-position: outside;
+	list-style-type: '   ';
+	list-style-type: none;
+	list-style-position: inside;
+	margin-left:5px;
+	text-indent:-35px;
 }
 
 .research-down-arrow {
-	font-size:30px;
-	top:5px;
-	position:relative;
 	cursor:pointer;
+	font-weight: bold;
 }
 
 .research-desc {
 	transition: opacity .1s, height .4s;
 	transition-timing-function: ease-in-out;
-	margin-left:10px;
+	margin-top:-2px;
+	padding-bottom:8px;
+	text-indent:0px;
 	opacity:0;
     height:0;
     overflow:hidden;
@@ -170,8 +185,8 @@ a:focus {
 .research-logo {
 	border:2px var(--color-dark) solid;
 	border-radius:50%;
-	margin-bottom: -9px;
-	width:25px;
+	margin-bottom: -7px;
+	width:22px;
 	transition: all .4s ease-in-out;
 }
 
@@ -184,18 +199,6 @@ a:focus {
 	font-size:14px;
 	word-wrap: break-word;
 	text-decoration: none;
-}
-
-.divider {
-	margin-top: 30px;
-}
-
-.cmid {
-	color:var(--color-mid);
-}
-
-.cdark {
-	color:var(--color-dark);
 }
 
 .photo-tab {
