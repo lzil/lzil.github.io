@@ -232,4 +232,5 @@ a:focus {
 .photo:hover {
 	background-color:var(--color-dark);
 	opacity:1;
+	/*object-fit:contain;*/
 }

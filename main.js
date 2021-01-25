@@ -12,13 +12,16 @@ document.addEventListener('DOMContentLoaded', function(){
 	var cur_target = document.querySelector('#about')
 	cur_target.style.display = 'block'
     cur_target.style.opacity = 1
+
+    var transitioning = false
 	
 	document.querySelectorAll('.nav-link').forEach(function(l) {
         l.addEventListener('click', function() {
     		var target = document.querySelector('#'+this.id.slice(4))
-    		if (target.id == cur_target.id) {
+    		if (target.id == cur_target.id || transitioning) {
     			return
     		}
+            // cur_target = target
 
             // fading the sections in and out
             // opacity decreases in increments of int_int, then increases
@@ -26,6 +29,8 @@ document.addEventListener('DOMContentLoaded', function(){
             var op2 = 0
             var int_time = 5
             var int_int = 0.05
+
+            transitioning = true
             // timer1,op1 for leaving element, timer2,op2 for incoming element
             var timer1 = setInterval(function() {
                 if (op1 <= int_int){
@@ -35,16 +40,19 @@ document.addEventListener('DOMContentLoaded', function(){
                     var timer2 = setInterval(function() {
                         if (op2 >= 1 - int_int) {
                             clearInterval(timer2)
+                            transitioning = false
                             target.style.opacity = 1
                             cur_target.style.opacity = 0
                             cur_target = target
+                        } else {
+                            op2 += int_int
+                            target.style.opacity = op2
                         }
-                        op2 += int_int
-                        target.style.opacity = op2
                     }, int_time);
+                } else {
+                    op1 -= int_int
+                    cur_target.style.opacity = op1
                 }
-                op1 -= int_int
-                cur_target.style.opacity = op1
             }, int_time);
 
             

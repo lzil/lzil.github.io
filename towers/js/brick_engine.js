@@ -532,7 +532,12 @@ function loadRemoveClip(number) {
 			brick_positions_loaded = response;
 			setupWorld();
 			generateBrickPositions();
-			settle(10);
+			console.log(bricks_array[0].GetPosition().x)
+			settle(5);
+			console.log(bricks_array[0].GetPosition().x)
+			settle(5);
+			console.log(bricks_array[0].GetPosition().x)
+
 			timer = 0;
 			// console.log(response)
 			// console.log(getNoiseResults(response, 'none', 0, 0.5, 0, 1, true, false))
