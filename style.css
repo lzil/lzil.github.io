@@ -164,6 +164,14 @@ a:focus {
 	font-weight: bold;
 }
 
+.research-down-arrow:hover {
+	cursor:pointer;
+	font-weight: bold;
+	color: white;
+	background-color: black;
+	border-radius: 10px;
+}
+
 .research-desc {
 	transition: opacity .1s, height .4s;
 	transition-timing-function: ease-in-out;
@@ -209,7 +217,7 @@ a:focus {
 
 .photo {
 	min-height:160px;
-	max-height:240px;
+	max-height:220px;
 	max-width:calc(100% - 11px);
 	padding: 5px;
 	margin:0 -1px -1px 0px;

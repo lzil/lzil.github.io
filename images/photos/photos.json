@@ -1,53 +1,60 @@
 PHOTOS = {
-    
-    "landscapes": [
-        "china-1.jpg",
-        "china-7.jpg",
-        "ireland-1.jpg",
-        "netherlands-2.jpg",
-        "slovakia-2.jpg",
-        "sweden-2.jpg",
-        "sweden-3.jpg",
-        "sweden-5.jpg",
-        "uk-10.jpg",
-        "albania-2.jpg",
-    ],
 
     "cities": [
-        "china-3.jpg",
         "china-5.jpg",
+        "croatia-1.jpg",
+        "france-1.jpg",
         "germany-1.jpg",
-        "germany-3.jpg",
+        "germany-2.jpg",
         "germany-4.jpg",
+        "italy-1.jpg",
+        "italy-3.jpg",
         "lithuania-1.jpg",
         "lithuania-2.jpg",
         "spain-1.jpg",
-        "spain-4.jpg",
-        "spain-6.jpg",
-        "uk-8.jpg",
-        "uk-12.jpg",
-        "uk-11.jpg",
-        "albania-1.jpg",
-        "croatia-2.jpg",
-        "croatia-3.jpg",
-        "bosnia-1.jpg",
-        "italy-1.jpg",
-        "italy-3.jpg"
+        "spain-2.jpg",
+        "uk-6.jpg",
+        "uk-7.jpg",
+        "uk-8.jpg"
     ],
-
-    "etc": [
-        "china-2.jpg",
+    
+    "landscapes": [
+        "albania-1.jpg",
         "china-4.jpg",
         "china-8.jpg",
-        "germany-2.jpg",
-        "ireland-2.jpg",
-        "netherlands-1.jpg",
+        "france-4.jpg",
+        "netherlands-2.jpg",
+        "slovakia-1.jpg",
+        "sweden-2.jpg",
+        "sweden-3.jpg",
+        "switzerland-1.jpg",
         "uk-1.jpg",
+        "usa-3.jpg",
+        "usa-4.jpg"
+    ],
+    
+
+    "etc": [
+        "china-1.jpg",
+        "china-7.jpg",
+        "france-2.jpg",
+        "china-2.jpg",
+        "china-3.jpg",
+        "germany-3.jpg",
+        "ireland-1.jpg",
+        "ireland-2.jpg",
+        "italy-2.jpg",
+        "netherlands-1.jpg",
+        "spain-3.jpg",
         "uk-2.jpg",
+        "uk-3.jpg",
         "uk-4.jpg",
-        "croatia-1.jpg",
-        "italy-2.jpg"
-    ]
+        "uk-5.jpg",
+        "uk-9.jpg",
+        "usa-1.jpg",
+        "usa-2.jpg"
+    ],
+
 }
 
 // convert -resize 50% source.png dest.jpg

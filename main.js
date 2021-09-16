@@ -95,22 +95,24 @@ document.addEventListener('DOMContentLoaded', function(){
 		for (var i = 0; i < photos[type].length; i++) {
 
 			var photo = document.createElement("img");
-			var src = 'images/photos/' + photos[type][i];
+			var src = 'images/photos/thumbnails/tn-' + photos[type][i];
+            var src2 = 'images/photos/' + photos[type][i]
 			photo.classList.add('photo')
 			photo.src = src;
+            photo.src2 = src2;
 
 			// add the photo and add the link
 			photo_tab.appendChild(photo)
             //photo.target = '_blank'
 			photo.onclick = function() {
-				window.open(this.src, '_blank')
+				window.open(this.src2, '_blank')
 			}
 		}
 	}
 
 	// actually adding the photos
-	load_photos("landscapes")
 	load_photos("cities")
+	load_photos("landscapes")
 	load_photos("etc")
 
 }, false)
