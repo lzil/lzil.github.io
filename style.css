@@ -164,14 +164,6 @@ a:focus {
 	font-weight: bold;
 }
 
-.research-down-arrow:hover {
-	cursor:pointer;
-	font-weight: bold;
-	color: white;
-	background-color: black;
-	border-radius: 10px;
-}
-
 .research-desc {
 	transition: opacity .1s, height .4s;
 	transition-timing-function: ease-in-out;
