@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
 	var load_photos = function(type) {
 		var photos = {}
-		photos[type] = shuffle(PHOTOS[type])
+        photos[type] = PHOTOS[type]
 		var photo_tab = document.querySelector('.photo-tab.' + type)
 
 		for (var i = 0; i < photos[type].length; i++) {
@@ -111,24 +111,6 @@ document.addEventListener('DOMContentLoaded', function(){
 	}
 
 	// actually adding the photos
-	load_photos("cities")
-	load_photos("landscapes")
-	load_photos("etc")
+	load_photos("all-photos")
 
 }, false)
-
-
-
-// adapted from https://stackoverflow.com/questions/6274339/how-can-i-shuffle-an-array
-function shuffle(a) {
-	var b = a.slice()
-    var j, x, i;
-    for (i = b.length - 1; i > 0; i--) {
-        j = Math.floor(Math.random() * (i + 1));
-        x = b[i];
-        b[i] = b[j];
-        b[j] = x;
-    }
-    return b;
-}
-
