@@ -4,7 +4,7 @@ import pdb
 import os
 
 tn_size = 5e5
-p_size = 5e6
+p_size = 1e6
 
 def get_two_power(n):
     if n > 2:
