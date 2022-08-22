@@ -1,7 +1,7 @@
 PHOTOS = {
 
     "all-photos": [
-        "china-4.jpg",
+        "france-4.jpg",
         "ecuador-2.jpg",
         
         "italy-3.jpg",
@@ -14,22 +14,21 @@ PHOTOS = {
         "china-2.jpg",
         "ireland-2.jpg",
 
-        "france-4.jpg",
-        "netherlands-1.jpg",
-        
         "germany-2.jpg",
         "germany-3.jpg",
+        
+        "china-3.jpg",
+        "netherlands-1.jpg",
 
         "ecuador-1.jpg",
         "panama-1.jpg",
-
-        "china-5.jpg",
-        
         "usa-1.jpg",
+        
+        "china-5.jpg",
         "uk-8.jpg",
         
-        "china-3.jpg",
         "germany-1.jpg",
+        "peru-2.jpg",
         
         "finland-1.jpg",
         "poland-1.jpg",
@@ -59,8 +58,6 @@ PHOTOS = {
         
         "sweden-3.jpg",
         "ecuador-3.jpg",
-
-        
     ]
 
 }

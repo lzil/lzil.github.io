@@ -3,7 +3,7 @@ import numpy as np
 import pdb
 import os
 
-tn_size = 5e5
+tn_size = 2e5
 p_size = 1e6
 
 def get_two_power(n):
